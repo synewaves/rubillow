@@ -44,7 +44,7 @@ module Rubillow
         raise ArgumentError, "The unit_type option is required"
       end
       
-      Models::Chart.new(Rubillow::Request.get("GetChart", options))
+      Models::PropertyChart.new(Rubillow::Request.get("GetChart", options))
     end
 
     def self.comps(options = {})

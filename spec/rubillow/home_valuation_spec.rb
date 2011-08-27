@@ -62,7 +62,7 @@ describe Rubillow::HomeValuation, ".chart" do
     Rubillow::Request.stubs(:request).returns(request)
     
     response = Rubillow::HomeValuation.chart({ :zpid => '48749425', :unit_type => "percent" })
-    response.should be_an_instance_of(Rubillow::Models::Chart)
+    response.should be_an_instance_of(Rubillow::Models::PropertyChart)
   end
 end
 

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegionChart:regionchart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RegionChart="http://www.zillow.com/static/xsd/RegionChart.xsd" xsi:schemaLocation="http://www.zillow.com/static/xsd/RegionChart.xsd http://www.zillowstatic.com/vstatic/6b4ea3e571a1ef97dd8f1e6be94b2725/static/xsd/RegionChart.xsd">
+  <request>
+    <city>seattle</city>
+    <state>WA</state>
+    <unit-type>percent</unit-type>
+    <width>300</width>
+    <height>150</height>
+  </request>
+  <message>
+    <text>Request successfully processed</text>
+    <code>0</code>
+  </message>
+  <response>
+    <url>http://www.zillow.com/app?chartDuration=1year&amp;chartType=partner&amp;cityRegionId=16037&amp;countyRegionId=0&amp;height=150&amp;nationRegionId=0&amp;neighborhoodRegionId=0&amp;page=webservice%2FGetRegionChart&amp;service=chart&amp;showCity=true&amp;showPercent=true&amp;stateRegionId=0&amp;width=300&amp;zipRegionId=0</url>
+    <link>http://www.zillow.com/homes/Seattle-WA/</link>
+    <links>
+      <local>http://www.zillow.com/local-info/WA-Seattle-home-value/r_16037/</local>
+      <forSale>http://www.zillow.com/homes/for_sale/Seattle-WA/</forSale>
+      <forSaleByOwner>http://www.zillow.com/homes/fsbo/Seattle-WA/</forSaleByOwner>
+    </links>
+    <zindex currency="USD"/>
+  </response>
+</RegionChart:regionchart>
+<!-- H:117  T:20ms  S:344  R:Sat Aug 27 10:05:13 PDT 2011  B:3.0.121144.20110823141116-comp_rel_b -->

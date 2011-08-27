@@ -5,6 +5,7 @@ require "rubillow/home_valuation"
 require "rubillow/mortgage"
 require "rubillow/postings"
 require "rubillow/property_details"
+require "rubillow/neighborhood"
 require "rubillow/models"
 
 module Rubillow

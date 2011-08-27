@@ -172,10 +172,9 @@ module Rubillow
       attr_accessor :height
       attr_accessor :width
       attr_accessor :url
-      attr_accessor :graphs_and_data
       
       def to_html
-        "<a href='#{@graphs_and_data}'><img src='#{@url}' height='#{@height}' width='#{width}' /></a>"
+        "<img src='#{@url}' height='#{@height}' width='#{width}' />"
       end
       
       protected
@@ -188,6 +187,24 @@ module Rubillow
         @height = @parser.xpath('//request/height').text.to_i
         @width = @parser.xpath('//request/width').text.to_i
         @url = @parser.xpath('//response/url').text
+      end
+    end
+    
+    # 
+    class PropertyChart < Chart
+      attr_accessor :graphs_and_data
+    
+      def to_html
+        "<a href='#{@graphs_and_data}'>" + super + "</a>"
+      end
+    
+      protected
+      
+      def parse
+        super
+        
+        return if !success?
+        
         @graphs_and_data = @parser.xpath('//response/graphsanddata').text
       end
     end
@@ -489,6 +506,194 @@ module Rubillow
         @parser.xpath('//editedFacts').children.each do |elm|
           @edited_facts[elm.name.underscore.to_sym] = elm.text
         end
+      end
+    end
+    
+    class Demographics < Base
+      include Linkable
+      
+      attr_accessor :region
+      attr_accessor :charts
+      attr_accessor :metrics
+      attr_accessor :affordability_data
+      attr_accessor :census_data
+      attr_accessor :segmentation
+      attr_accessor :characteristics
+      
+      protected
+      
+      def parse
+        super
+        
+        return if !success?
+        
+        extract_links(@parser)
+        
+        @region = Region.new(@parser.xpath('//region').to_xml)
+        
+        @charts = {}
+        @parser.xpath('//charts').children.each do |elm|
+          if elm.xpath('name').attribute('deprecated').nil?
+            @charts[elm.xpath('name').text] = elm.xpath('url').text
+          end
+        end
+        
+        @metrics = {}
+        @affordability_data = {}
+        @census_data = {}
+        @segmentation = {}
+        @characteristics = {}
+        
+        @parser.xpath('//pages').children.each do |page|
+          page.xpath('tables').children.each do |table|
+            table_name = table.xpath('name').text
+            
+            if table_name == "Affordability Data" && table.parent.parent.xpath('name').text == "Affordability"
+              extract_affordability_data(table)
+            elsif table_name[0,14] == "Census Summary"
+              extract_census_data(table, table_name[15, table_name.length])
+            else
+              extract_data(table, table_name)
+            end
+          end
+        end
+        
+        @parser.xpath('//segmentation').children.each do |segment|
+          @segmentation[segment.xpath('title').text] = {
+            :name => segment.xpath('name').text,
+            :description => segment.xpath('description').text,
+          }
+        end
+        
+        @parser.xpath('//uniqueness').children.each do |category|
+          key = category.attribute('type').text
+          @characteristics[key] = []
+          category.xpath('characteristic').each do |c|
+            @characteristics[key] << c.text
+          end
+        end
+      end
+      
+      def extract_affordability_data(xml)
+        xml.xpath('data').children.each do |data|
+          @affordability_data[data.xpath('name').text] = extract_metrics(data)
+        end
+      end
+      
+      def extract_census_data(xml, type)
+        @census_data[type] = {}
+        
+        xml.xpath('data').children.each do |data|
+          @census_data[type][data.xpath('name').text] = extract_metrics(data)
+        end
+      end
+      
+      def extract_data(xml, type)
+        if @metrics[type].nil?
+          @metrics[type] = {}
+        end
+        
+        xml.xpath('data').children.each do |data|
+          @metrics[type][data.xpath('name').text] = extract_metrics(data)
+        end
+      end
+      
+      def extract_metrics(xml)
+        if xml.xpath('values').empty?
+          DemographicValue.new(xml.xpath('value'))
+        else
+          {
+            :neighborhood => DemographicValue.new(xml.xpath('values/neighborhood/value')),
+            :city => DemographicValue.new(xml.xpath('values/city/value')),
+            :nation => DemographicValue.new(xml.xpath('values/nation/value')),
+            :zip => DemographicValue.new(xml.xpath('values/zip/value')),
+          }
+        end
+      end
+    end
+    
+    class DemographicValue
+      attr_accessor :value
+      attr_accessor :type
+      
+      def initialize(xml)
+        if !xml.empty?
+          @value = xml.text
+          @type = xml.attribute('type').value if !xml.attribute('type').nil?
+        end
+      end
+    end
+    
+    #
+    class RegionChildren < Base
+      attr_accessor :region
+      attr_accessor :regions
+      
+      protected
+      
+      def parse
+        super
+        
+        return if !success?
+        
+        @region = Region.new(@parser.xpath('//response/region').to_xml)
+        
+        @regions = []
+        @parser.xpath('//response/list').children.each do |region|
+          if region.name == "region"
+            @regions << Region.new(region.to_xml)
+          end
+        end
+      end
+    end
+    
+    # 
+    class Region < Base
+      attr_accessor :id
+      attr_accessor :state
+      attr_accessor :city
+      attr_accessor :neighborhood
+      attr_accessor :latitude
+      attr_accessor :longitude
+      attr_accessor :zmmrateurl
+      
+      protected
+      
+      def parse
+        super
+        
+        return if !success?
+        
+        @id = @parser.xpath('//id').text
+        @state = @parser.xpath('//state').text
+        @city = @parser.xpath('//city').text
+        @neighborhood = @parser.xpath('//neighborhood').text
+        @latitude = @parser.xpath('//latitude').text
+        @longitude = @parser.xpath('//longitude').text
+        @zmmrateurl = @parser.xpath('//zmmrateurl').text
+      end
+    end
+    
+    # 
+    class RegionChart < Chart
+      include Linkable
+      
+      attr_accessor :link
+    
+      def to_html
+        "<a href='#{@link}'>" + super + "</a>"
+      end
+    
+      protected
+      
+      def parse
+        super
+        
+        return if !success?
+        
+        extract_links(@parser)
+        
+        @link = @parser.xpath('//response/link').text
       end
     end
   end

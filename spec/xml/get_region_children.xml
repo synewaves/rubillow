@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegionChildren:regionchildren xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RegionChildren="http://www.zillow.com/static/xsd/RegionChildren.xsd" xsi:schemaLocation="http://www.zillow.com/static/xsd/RegionChildren.xsd http://www.zillowstatic.com/vstatic/6b4ea3e571a1ef97dd8f1e6be94b2725/static/xsd/RegionChildren.xsd">
+  <request>
+    <state>wa</state>
+    <city>seattle</city>
+    <childtype>neighborhood</childtype>
+  </request>
+  <message>
+    <text>Request successfully processed</text>
+    <code>0</code>
+  </message>
+  <response>
+    <region>
+      <id>16037</id>
+      <latitude>47.559364</latitude>
+      <longitude>-122.313755</longitude>
+    </region>
+    <subregiontype>neighborhood</subregiontype>
+    <list>
+      <count>107</count>
+      <region>
+        <id>343997</id>
+        <name>Alki</name>
+        <zindex currency="USD">433642</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Alki/r_343997/</url>
+        <latitude>47.576465</latitude>
+        <longitude>-122.398841</longitude>
+      </region>
+      <region>
+        <id>250788</id>
+        <name>Greenwood</name>
+        <zindex currency="USD">307964</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Greenwood/r_250788/</url>
+        <latitude>47.694211</latitude>
+        <longitude>-122.355281</longitude>
+      </region>
+      <region>
+        <id>252248</id>
+        <name>Wallingford</name>
+        <zindex currency="USD">442547</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Wallingford/r_252248/</url>
+        <latitude>47.658763</latitude>
+        <longitude>-122.334464</longitude>
+      </region>
+      <region>
+        <id>250150</id>
+        <name>Broadway</name>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Broadway/r_250150/</url>
+        <latitude>47.62622</latitude>
+        <longitude>-122.321453</longitude>
+      </region>
+      <region>
+        <id>344019</id>
+        <name>Admiral</name>
+        <zindex currency="USD">388661</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Admiral/r_344019/</url>
+        <latitude>47.581726</latitude>
+        <longitude>-122.387363</longitude>
+      </region>
+      <region>
+        <id>250050</id>
+        <name>Beacon Hill</name>
+        <zindex currency="USD">264395</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Beacon-Hill/r_250050/</url>
+        <latitude>47.556114</latitude>
+        <longitude>-122.302826</longitude>
+      </region>
+      <region>
+        <id>344000</id>
+        <name>Maple Leaf</name>
+        <zindex currency="USD">352603</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Maple-Leaf/r_344000/</url>
+        <latitude>47.695036</latitude>
+        <longitude>-122.316631</longitude>
+      </region>
+      <region>
+        <id>344001</id>
+        <name>Wedgwood</name>
+        <zindex currency="USD">387054</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Wedgwood/r_344001/</url>
+        <latitude>47.690135</latitude>
+        <longitude>-122.298087</longitude>
+      </region>
+      <region>
+        <id>271961</id>
+        <name>Phinney Ridge</name>
+        <zindex currency="USD">421508</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Phinney-Ridge/r_271961/</url>
+        <latitude>47.672705</latitude>
+        <longitude>-122.355277</longitude>
+      </region>
+      <region>
+        <id>251709</id>
+        <name>Ravenna</name>
+        <zindex currency="USD">419260</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Ravenna/r_251709/</url>
+        <latitude>47.672136</latitude>
+        <longitude>-122.301112</longitude>
+      </region>
+      <region>
+        <id>271808</id>
+        <name>Belltown</name>
+        <zindex currency="USD">293932</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Belltown/r_271808/</url>
+        <latitude>47.614593</latitude>
+        <longitude>-122.348464</longitude>
+      </region>
+      <region>
+        <id>271932</id>
+        <name>North Beacon Hill</name>
+        <zindex currency="USD">282984</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/North-Beacon-Hill/r_271932/</url>
+        <latitude>47.578054</latitude>
+        <longitude>-122.308872</longitude>
+      </region>
+      <region>
+        <id>250692</id>
+        <name>Fremont</name>
+        <zindex currency="USD">376994</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Fremont/r_250692/</url>
+        <latitude>47.656187</latitude>
+        <longitude>-122.352183</longitude>
+      </region>
+      <region>
+        <id>271942</id>
+        <name>North Queen Anne</name>
+        <zindex currency="USD">468167</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/North-Queen-Anne/r_271942/</url>
+        <latitude>47.649292</latitude>
+        <longitude>-122.36301</longitude>
+      </region>
+      <region>
+        <id>251170</id>
+        <name>Loyal Heights</name>
+        <zindex currency="USD">381498</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Loyal-Heights/r_251170/</url>
+        <latitude>47.683237</latitude>
+        <longitude>-122.384853</longitude>
+      </region>
+      <region>
+        <id>250206</id>
+        <name>Capitol Hill</name>
+        <zindex currency="USD">319398</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Capitol-Hill/r_250206/</url>
+        <latitude>47.62622</latitude>
+        <longitude>-122.315979</longitude>
+      </region>
+      <region>
+        <id>271900</id>
+        <name>Lawton Park</name>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Lawton-Park/r_271900/</url>
+        <latitude>47.659378</latitude>
+        <longitude>-122.409137</longitude>
+      </region>
+      <region>
+        <id>250780</id>
+        <name>Green Lake</name>
+        <zindex currency="USD">411173</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Green-Lake/r_250780/</url>
+        <latitude>47.679958</latitude>
+        <longitude>-122.333709</longitude>
+      </region>
+      <region>
+        <id>250801</id>
+        <name>Haller Lake</name>
+        <zindex currency="USD">278259</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Haller-Lake/r_250801/</url>
+        <latitude>47.719604</latitude>
+        <longitude>-122.33475</longitude>
+      </region>
+      <region>
+        <id>271819</id>
+        <name>Broadview</name>
+        <zindex currency="USD">380873</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Broadview/r_271819/</url>
+        <latitude>47.71965</latitude>
+        <longitude>-122.368416</longitude>
+      </region>
+      <region>
+        <id>252056</id>
+        <name>Sunset Hill</name>
+        <zindex currency="USD">412797</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Sunset-Hill/r_252056/</url>
+        <latitude>47.677581</latitude>
+        <longitude>-122.401054</longitude>
+      </region>
+      <region>
+        <id>271856</id>
+        <name>East Queen Anne</name>
+        <zindex currency="USD">491715</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/East-Queen-Anne/r_271856/</url>
+        <latitude>47.637701</latitude>
+        <longitude>-122.350189</longitude>
+      </region>
+      <region>
+        <id>344022</id>
+        <name>Gatewood</name>
+        <zindex currency="USD">336869</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Gatewood/r_344022/</url>
+        <latitude>47.537449</latitude>
+        <longitude>-122.387363</longitude>
+      </region>
+      <region>
+        <id>343996</id>
+        <name>View Ridge</name>
+        <zindex currency="USD">487688</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/View-Ridge/r_343996/</url>
+        <latitude>47.683937</latitude>
+        <longitude>-122.27431</longitude>
+      </region>
+      <region>
+        <id>271913</id>
+        <name>Matthews Beach</name>
+        <zindex currency="USD">403163</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Matthews-Beach/r_271913/</url>
+        <latitude>47.703815</latitude>
+        <longitude>-122.279033</longitude>
+      </region>
+      <region>
+        <id>344024</id>
+        <name>Arbor Heights</name>
+        <zindex currency="USD">302329</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Arbor-Heights/r_344024/</url>
+        <latitude>47.506979</latitude>
+        <longitude>-122.381278</longitude>
+      </region>
+      <region>
+        <id>272018</id>
+        <name>West Queen Anne</name>
+        <zindex currency="USD">508529</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/West-Queen-Anne/r_272018/</url>
+        <latitude>47.63334</latitude>
+        <longitude>-122.366405</longitude>
+      </region>
+      <region>
+        <id>251704</id>
+        <name>Rainier Beach</name>
+        <zindex currency="USD">252856</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Rainier-Beach/r_251704/</url>
+        <latitude>47.511647</latitude>
+        <longitude>-122.257972</longitude>
+      </region>
+      <region>
+        <id>271815</id>
+        <name>Briarcliff</name>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Briarcliff/r_271815/</url>
+        <latitude>47.642577</latitude>
+        <longitude>-122.408081</longitude>
+      </region>
+      <region>
+        <id>272001</id>
+        <name>University District</name>
+        <zindex currency="USD">383825</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/University-District/r_272001/</url>
+        <latitude>47.660898</latitude>
+        <longitude>-122.305045</longitude>
+      </region>
+      <region>
+        <id>344023</id>
+        <name>Fauntleroy</name>
+        <zindex currency="USD">397751</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Fauntleroy/r_344023/</url>
+        <latitude>47.522216</latitude>
+        <longitude>-122.389197</longitude>
+      </region>
+      <region>
+        <id>271957</id>
+        <name>Olympic Hills</name>
+        <zindex currency="USD">280717</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Olympic-Hills/r_271957/</url>
+        <latitude>47.726604</latitude>
+        <longitude>-122.302455</longitude>
+      </region>
+      <region>
+        <id>271901</id>
+        <name>Leschi</name>
+        <zindex currency="USD">463027</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Leschi/r_271901/</url>
+        <latitude>47.599748</latitude>
+        <longitude>-122.290462</longitude>
+      </region>
+      <region>
+        <id>344008</id>
+        <name>East Ballard</name>
+        <zindex currency="USD">374599</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/East-Ballard/r_344008/</url>
+        <latitude>47.666069</latitude>
+        <longitude>-122.368621</longitude>
+      </region>
+      <region>
+        <id>344029</id>
+        <name>Highland Park</name>
+        <zindex currency="USD">214606</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Highland-Park/r_344029/</url>
+        <latitude>47.527126</latitude>
+        <longitude>-122.341404</longitude>
+      </region>
+      <region>
+        <id>271869</id>
+        <name>First Hill</name>
+        <zindex currency="USD">270261</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/First-Hill/r_271869/</url>
+        <latitude>47.60819</latitude>
+        <longitude>-122.323829</longitude>
+      </region>
+      <region>
+        <id>250017</id>
+        <name>Ballard</name>
+        <zindex currency="USD">305134</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Ballard/r_250017/</url>
+        <latitude>47.668329</latitude>
+        <longitude>-122.384536</longitude>
+      </region>
+      <region>
+        <id>271990</id>
+        <name>Magnolia</name>
+        <zindex currency="USD">456634</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Magnolia/r_271990/</url>
+        <latitude>47.650941</latitude>
+        <longitude>-122.409137</longitude>
+      </region>
+      <region>
+        <id>251100</id>
+        <name>Laurelhurst</name>
+        <zindex currency="USD">750350</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Laurelhurst/r_251100/</url>
+        <latitude>47.658207</latitude>
+        <longitude>-122.278598</longitude>
+      </region>
+      <region>
+        <id>252336</id>
+        <name>Whittier Heights</name>
+        <zindex currency="USD">389533</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Whittier-Heights/r_252336/</url>
+        <latitude>47.683315</latitude>
+        <longitude>-122.371425</longitude>
+      </region>
+      <region>
+        <id>271814</id>
+        <name>Bitter Lake</name>
+        <zindex currency="USD">271674</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Bitter-Lake/r_271814/</url>
+        <latitude>47.719625</latitude>
+        <longitude>-122.350124</longitude>
+      </region>
+      <region>
+        <id>343999</id>
+        <name>North College Park</name>
+        <zindex currency="USD">288780</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/North-College-Park/r_343999/</url>
+        <latitude>47.699481</latitude>
+        <longitude>-122.336868</longitude>
+      </region>
+      <region>
+        <id>344003</id>
+        <name>Bryant</name>
+        <zindex currency="USD">410961</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Bryant/r_344003/</url>
+        <latitude>47.672037</latitude>
+        <longitude>-122.286167</longitude>
+      </region>
+      <region>
+        <id>272005</id>
+        <name>Victory Heights</name>
+        <zindex currency="USD">324205</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Victory-Heights/r_272005/</url>
+        <latitude>47.709842</latitude>
+        <longitude>-122.303947</longitude>
+      </region>
+      <region>
+        <id>251186</id>
+        <name>Madison Park</name>
+        <zindex currency="USD">759789</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Madison-Park/r_251186/</url>
+        <latitude>47.632468</latitude>
+        <longitude>-122.282596</longitude>
+      </region>
+      <region>
+        <id>271906</id>
+        <name>Lower Queen Anne</name>
+        <zindex currency="USD">354248</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Lower-Queen-Anne/r_271906/</url>
+        <latitude>47.628862</latitude>
+        <longitude>-122.354041</longitude>
+      </region>
+      <region>
+        <id>271921</id>
+        <name>Minor</name>
+        <zindex currency="USD">336416</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Minor/r_271921/</url>
+        <latitude>47.60607</latitude>
+        <longitude>-122.309627</longitude>
+      </region>
+      <region>
+        <id>344021</id>
+        <name>Fairmount Park</name>
+        <zindex currency="USD">305545</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Fairmount-Park/r_344021/</url>
+        <latitude>47.555063</latitude>
+        <longitude>-122.379867</longitude>
+      </region>
+      <region>
+        <id>344031</id>
+        <name>South Delridge</name>
+        <zindex currency="USD">211037</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/South-Delridge/r_344031/</url>
+        <latitude>47.52674</latitude>
+        <longitude>-122.361156</longitude>
+      </region>
+      <region>
+        <id>250146</id>
+        <name>Brighton</name>
+        <zindex currency="USD">248964</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Brighton/r_250146/</url>
+        <latitude>47.538786</latitude>
+        <longitude>-122.275962</longitude>
+      </region>
+      <region>
+        <id>344026</id>
+        <name>Genesee</name>
+        <zindex currency="USD">347617</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Genesee/r_344026/</url>
+        <latitude>47.56896</latitude>
+        <longitude>-122.282714</longitude>
+      </region>
+      <region>
+        <id>344028</id>
+        <name>Mt. Baker</name>
+        <zindex currency="USD">469952</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Mt.-Baker/r_344028</url>
+        <latitude>47.581626</latitude>
+        <longitude>-122.289298</longitude>
+      </region>
+      <region>
+        <id>271831</id>
+        <name>Cedar Park</name>
+        <zindex currency="USD">332176</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Cedar-Park/r_271831/</url>
+        <latitude>47.724626</latitude>
+        <longitude>-122.287479</longitude>
+      </region>
+      <region>
+        <id>251187</id>
+        <name>Madrona</name>
+        <zindex currency="USD">519566</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Madrona/r_251187/</url>
+        <latitude>47.61269</latitude>
+        <longitude>-122.288997</longitude>
+      </region>
+      <region>
+        <id>344030</id>
+        <name>Roxhill</name>
+        <zindex currency="USD">256802</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Roxhill/r_344030/</url>
+        <latitude>47.527391</latitude>
+        <longitude>-122.370662</longitude>
+      </region>
+      <region>
+        <id>343994</id>
+        <name>South Beacon Hill</name>
+        <zindex currency="USD">232575</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/South-Beacon-Hill/r_343994/</url>
+        <latitude>47.524379</latitude>
+        <longitude>-122.289554</longitude>
+      </region>
+      <region>
+        <id>343993</id>
+        <name>Pinehurst</name>
+        <zindex currency="USD">280725</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Pinehurst/r_343993/</url>
+        <latitude>47.723129</latitude>
+        <longitude>-122.320342</longitude>
+      </region>
+      <region>
+        <id>344034</id>
+        <name>Riverview</name>
+        <zindex currency="USD">252369</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Riverview/r_344034/</url>
+        <latitude>47.546365</latitude>
+        <longitude>-122.352741</longitude>
+      </region>
+      <region>
+        <id>250478</id>
+        <name>Dunlap</name>
+        <zindex currency="USD">228776</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Dunlap/r_250478/</url>
+        <latitude>47.525358</latitude>
+        <longitude>-122.270274</longitude>
+      </region>
+      <region>
+        <id>271849</id>
+        <name>Downtown</name>
+        <zindex currency="USD">454967</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Downtown/r_271849/</url>
+        <latitude>47.607345</latitude>
+        <longitude>-122.33509</longitude>
+      </region>
+      <region>
+        <id>251076</id>
+        <name>Lakewood</name>
+        <zindex currency="USD">364752</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Lakewood/r_251076/</url>
+        <latitude>47.559577</latitude>
+        <longitude>-122.266502</longitude>
+      </region>
+      <region>
+        <id>344027</id>
+        <name>Rainier View</name>
+        <zindex currency="USD">198142</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Rainier-View/r_344027/</url>
+        <latitude>47.500984</latitude>
+        <longitude>-122.256076</longitude>
+      </region>
+      <region>
+        <id>271857</id>
+        <name>Eastlake</name>
+        <zindex currency="USD">345435</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Eastlake/r_271857/</url>
+        <latitude>47.638485</latitude>
+        <longitude>-122.329231</longitude>
+      </region>
+      <region>
+        <id>271977</id>
+        <name>Seward Park</name>
+        <zindex currency="USD">427200</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Seward-Park/r_271977/</url>
+        <latitude>47.547012</latitude>
+        <longitude>-122.259807</longitude>
+      </region>
+      <region>
+        <id>271915</id>
+        <name>Meadowbrook</name>
+        <zindex currency="USD">327922</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Meadowbrook/r_271915/</url>
+        <latitude>47.706501</latitude>
+        <longitude>-122.298034</longitude>
+      </region>
+      <region>
+        <id>344025</id>
+        <name>Hillman City</name>
+        <zindex currency="USD">260377</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Hillman-City/r_344025/</url>
+        <latitude>47.549944</latitude>
+        <longitude>-122.281021</longitude>
+      </region>
+      <region>
+        <id>271923</id>
+        <name>Montlake</name>
+        <zindex currency="USD">610920</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Montlake/r_271923/</url>
+        <latitude>47.640871</latitude>
+        <longitude>-122.308456</longitude>
+      </region>
+      <region>
+        <id>250383</id>
+        <name>Crown Hill</name>
+        <zindex currency="USD">310520</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Crown-Hill/r_250383/</url>
+        <latitude>47.696054</latitude>
+        <longitude>-122.371379</longitude>
+      </region>
+      <region>
+        <id>344020</id>
+        <name>Junction</name>
+        <zindex currency="USD">335269</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Junction/r_344020/</url>
+        <latitude>47.564802</latitude>
+        <longitude>-122.385207</longitude>
+      </region>
+      <region>
+        <id>344009</id>
+        <name>North Beach</name>
+        <zindex currency="USD">477310</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/North-Beach/r_344009/</url>
+        <latitude>47.696701</latitude>
+        <longitude>-122.397186</longitude>
+      </region>
+      <region>
+        <id>251971</id>
+        <name>South Park</name>
+        <zindex currency="USD">200453</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/South-Park/r_251971/</url>
+        <latitude>47.529861</latitude>
+        <longitude>-122.321971</longitude>
+      </region>
+      <region>
+        <id>271839</id>
+        <name>Columbia City</name>
+        <zindex currency="USD">290702</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Columbia-City/r_271839/</url>
+        <latitude>47.5648</latitude>
+        <longitude>-122.286002</longitude>
+      </region>
+      <region>
+        <id>272022</id>
+        <name>Westlake</name>
+        <zindex currency="USD">324613</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Westlake/r_272022/</url>
+        <latitude>47.634922</latitude>
+        <longitude>-122.341613</longitude>
+      </region>
+      <region>
+        <id>344005</id>
+        <name>Olympic Manor</name>
+        <zindex currency="USD">514622</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Olympic-Manor/r_344005/</url>
+        <latitude>47.696056</latitude>
+        <longitude>-122.382183</longitude>
+      </region>
+      <region>
+        <id>344033</id>
+        <name>High Point</name>
+        <zindex currency="USD">248930</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/High-Point/r_344033/</url>
+        <latitude>47.543745</latitude>
+        <longitude>-122.368504</longitude>
+      </region>
+      <region>
+        <id>344015</id>
+        <name>Judkins Park</name>
+        <zindex currency="USD">282799</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Judkins-Park/r_344015/</url>
+        <latitude>47.596023</latitude>
+        <longitude>-122.301551</longitude>
+      </region>
+      <region>
+        <id>344006</id>
+        <name>Blue Ridge</name>
+        <zindex currency="USD">448532</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Blue-Ridge/r_344006/</url>
+        <latitude>47.705358</latitude>
+        <longitude>-122.37735</longitude>
+      </region>
+      <region>
+        <id>344013</id>
+        <name>Central</name>
+        <zindex currency="USD">375173</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Central/r_344013/</url>
+        <latitude>47.615919</latitude>
+        <longitude>-122.306362</longitude>
+      </region>
+      <region>
+        <id>344032</id>
+        <name>North Delridge</name>
+        <zindex currency="USD">249099</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/North-Delridge/r_344032/</url>
+        <latitude>47.562585</latitude>
+        <longitude>-122.363921</longitude>
+      </region>
+      <region>
+        <id>344010</id>
+        <name>Uptown</name>
+        <zindex currency="USD">259295</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Uptown/r_344010/</url>
+        <latitude>47.622282</latitude>
+        <longitude>-122.354228</longitude>
+      </region>
+      <region>
+        <id>272026</id>
+        <name>Windermere</name>
+        <zindex currency="USD">695781</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Windermere/r_272026/</url>
+        <latitude>47.670198</latitude>
+        <longitude>-122.262973</longitude>
+      </region>
+      <region>
+        <id>344002</id>
+        <name>Roosevelt</name>
+        <zindex currency="USD">389291</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Roosevelt/r_344002/</url>
+        <latitude>47.677045</latitude>
+        <longitude>-122.316322</longitude>
+      </region>
+      <region>
+        <id>344004</id>
+        <name>Hawthorne Hills</name>
+        <zindex currency="USD">544816</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Hawthorne-Hills/r_344004/</url>
+        <latitude>47.671894</latitude>
+        <longitude>-122.271549</longitude>
+      </region>
+      <region>
+        <id>344014</id>
+        <name>Garfield</name>
+        <zindex currency="USD">317096</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Garfield/r_344014/</url>
+        <latitude>47.607286</latitude>
+        <longitude>-122.299503</longitude>
+      </region>
+      <region>
+        <id>344012</id>
+        <name>Madison Valley</name>
+        <zindex currency="USD">436468</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Madison-Valley/r_344012/</url>
+        <latitude>47.626805</latitude>
+        <longitude>-122.294018</longitude>
+      </region>
+      <region>
+        <id>250889</id>
+        <name>Holly Park</name>
+        <zindex currency="USD">238686</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Holly-Park/r_250889/</url>
+        <latitude>47.53795</latitude>
+        <longitude>-122.288787</longitude>
+      </region>
+      <region>
+        <id>271964</id>
+        <name>Portage Bay</name>
+        <zindex currency="USD">560689</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Portage-Bay/r_271964/</url>
+        <latitude>47.647442</latitude>
+        <longitude>-122.31855</longitude>
+      </region>
+      <region>
+        <id>344011</id>
+        <name>Denny - Blaine</name>
+        <zindex currency="USD">1025177</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Denny----Blaine/r_344011/</url>
+        <latitude>47.617123</latitude>
+        <longitude>-122.284957</longitude>
+      </region>
+      <region>
+        <id>343998</id>
+        <name>Northgate</name>
+        <zindex currency="USD">189044</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Northgate/r_343998/</url>
+        <latitude>47.707712</latitude>
+        <longitude>-122.321105</longitude>
+      </region>
+      <region>
+        <id>250149</id>
+        <name>Broadmoor</name>
+        <zindex currency="USD">1488353</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Broadmoor/r_250149/</url>
+        <latitude>47.637394</latitude>
+        <longitude>-122.290645</longitude>
+      </region>
+      <region>
+        <id>250714</id>
+        <name>Georgetown</name>
+        <zindex currency="USD">220114</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Georgetown/r_250714/</url>
+        <latitude>47.540345</latitude>
+        <longitude>-122.316844</longitude>
+      </region>
+      <region>
+        <id>250939</id>
+        <name>Interbay</name>
+        <zindex currency="USD">331345</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Interbay/r_250939/</url>
+        <latitude>47.642471</latitude>
+        <longitude>-122.379722</longitude>
+      </region>
+      <region>
+        <id>344016</id>
+        <name>Jackson Place</name>
+        <zindex currency="USD">277641</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Jackson-Place/r_344016/</url>
+        <latitude>47.594795</latitude>
+        <longitude>-122.3102</longitude>
+      </region>
+      <region>
+        <id>271963</id>
+        <name>Pioneer Square</name>
+        <zindex currency="USD">371352</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Pioneer-Square/r_271963/</url>
+        <latitude>47.597828</latitude>
+        <longitude>-122.332927</longitude>
+      </region>
+      <region>
+        <id>271893</id>
+        <name>International District</name>
+        <zindex currency="USD">181694</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/International-District/r_271893/</url>
+        <latitude>47.596944</latitude>
+        <longitude>-122.324714</longitude>
+      </region>
+      <region>
+        <id>344018</id>
+        <name>Waterfront</name>
+        <zindex currency="USD">394807</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Waterfront/r_344018/</url>
+        <latitude>47.605507</latitude>
+        <longitude>-122.348037</longitude>
+      </region>
+      <region>
+        <id>271892</id>
+        <name>Industrial District</name>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Industrial-District/r_271892/</url>
+        <latitude>47.566396</latitude>
+        <longitude>-122.347362</longitude>
+      </region>
+      <region>
+        <id>271804</id>
+        <name>Atlantic</name>
+        <zindex currency="USD">283511</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Atlantic/r_271804/</url>
+        <latitude>47.583337</latitude>
+        <longitude>-122.301715</longitude>
+      </region>
+      <region>
+        <id>343995</id>
+        <name>Denny Triangle</name>
+        <zindex currency="USD">349068</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Denny-Triangle/r_343995/</url>
+        <latitude>47.615618</latitude>
+        <longitude>-122.337897</longitude>
+      </region>
+      <region>
+        <id>252396</id>
+        <name>Yesler Terrace</name>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Yesler-Terrace/r_252396/</url>
+        <latitude>47.602123</latitude>
+        <longitude>-122.320735</longitude>
+      </region>
+      <region>
+        <id>271827</id>
+        <name>Cascade</name>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Cascade/r_271827/</url>
+        <latitude>47.622201</latitude>
+        <longitude>-122.331382</longitude>
+      </region>
+      <region>
+        <id>271886</id>
+        <name>Harbor Island</name>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Harbor-Island/r_271886/</url>
+        <latitude>47.5799</latitude>
+        <longitude>-122.352043</longitude>
+      </region>
+      <region>
+        <id>271975</id>
+        <name>Sand Point</name>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Sand-Point/r_271975/</url>
+        <latitude>47.681854</latitude>
+        <longitude>-122.256442</longitude>
+      </region>
+      <region>
+        <id>271987</id>
+        <name>South Lake Union</name>
+        <zindex currency="USD">277056</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/South-Lake-Union/r_271987/</url>
+        <latitude>47.622163</latitude>
+        <longitude>-122.342368</longitude>
+      </region>
+      <region>
+        <id>344007</id>
+        <name>Woodland</name>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Woodland/r_344007/</url>
+        <latitude>47.670467</latitude>
+        <longitude>-122.347194</longitude>
+      </region>
+      <region>
+        <id>344017</id>
+        <name>Little Saigon</name>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Little-Saigon/r_344017/</url>
+        <latitude>47.595203</latitude>
+        <longitude>-122.314853</longitude>
+      </region>
+      <region>
+        <id>56654</id>
+        <name>Seaview</name>
+        <zindex currency="USD">347960</zindex>
+        <url>http://www.zillow.com/local-info/WA-Seattle/Seaview/r_56654/</url>
+        <latitude>47.550758</latitude>
+        <longitude>-122.395767</longitude>
+      </region>
+    </list>
+  </response>
+</RegionChildren:regionchildren>
+<!-- H:117  T:380ms  S:13465  R:Sat Aug 27 09:55:27 PDT 2011  B:3.0.121144.20110823141116-comp_rel_b -->

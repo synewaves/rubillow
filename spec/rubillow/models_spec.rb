@@ -95,18 +95,18 @@ describe Rubillow::Models::SearchResult do
   end
 end
 
-describe Rubillow::Models::Chart do
+describe Rubillow::Models::PropertyChart do
   it "populates the results" do
-    data = Rubillow::Models::Chart.new(get_xml('get_chart.xml'))
+    data = Rubillow::Models::PropertyChart.new(get_xml('get_chart.xml'))
     
     data.width.should == 300
     data.height.should == 150
     data.url.should == "http://www.zillow.com/app?chartDuration=1year&chartType=partner&height=150&page=webservice%2FGetChart&service=chart&showPercent=true&width=300&zpid=48749425"
-    data.graphs_and_data == "http://www.zillow.com/homedetails/2114-Bigelow-Ave-N-Seattle-WA-98109/48749425_zpid/#charts-and-data"
+    data.graphs_and_data.should == "http://www.zillow.com/homedetails/2114-Bigelow-Ave-N-Seattle-WA-98109/48749425_zpid/#charts-and-data"
   end
   
   it "should format correctly for HTML" do
-    data = Rubillow::Models::Chart.new(get_xml('get_chart.xml'))
+    data = Rubillow::Models::PropertyChart.new(get_xml('get_chart.xml'))
     
     data.to_html.should == "<a href='http://www.zillow.com/homedetails/2114-Bigelow-Ave-N-Seattle-WA-98109/48749425_zpid/#charts-and-data'><img src='http://www.zillow.com/app?chartDuration=1year&chartType=partner&height=150&page=webservice%2FGetChart&service=chart&showPercent=true&width=300&zpid=48749425' height='150' width='300' /></a>"
   end
@@ -425,6 +425,7 @@ describe Rubillow::Models::UpdatedPropertyDetails do
     data.posting[:external_url].should == "http://mls.lakere.com/srch_mls/detail.php?mode=ag&LN=28097669&t=listings&l="
     data.posting[:mls].should == "28097669"
     data.images_count.should == "17"
+    data.images.count.should == 5
     data.images[0].should == "http://photos1.zillow.com/is/image/i0/i4/i3019/IS1d2piz9kupb4z.jpg?op_sharpen=1&qlt=90&hei=400&wid=400"
     data.images[1].should == "http://photos3.zillow.com/is/image/i0/i4/i3019/ISkzzhgcun7u03.jpg?op_sharpen=1&qlt=90&hei=400&wid=400"
     data.images[2].should == "http://photos2.zillow.com/is/image/i0/i4/i3019/ISkzzhg8wkzq1v.jpg?op_sharpen=1&qlt=90&hei=400&wid=400"
@@ -445,5 +446,91 @@ describe Rubillow::Models::UpdatedPropertyDetails do
     data.edited_facts[:heating_sources].should == "Gas"
     data.edited_facts[:heating_system].should == "Forced air"
     data.edited_facts[:rooms].should == "Laundry room, Walk-in closet, Master bath, Office, Dining room, Family room, Breakfast nook"
+  end
+end
+
+describe Rubillow::Models::Demographics do
+  it "populates the data" do
+    data = Rubillow::Models::Demographics.new(get_xml('get_demographics.xml'))
+    
+    data.region.id.should == "250017"
+    data.region.state.should == "Washington"
+    data.region.neighborhood.should == "Ballard"
+    data.region.latitude.should == "47.668329"
+    data.region.longitude.should == "-122.384536"
+    data.region.zmmrateurl.should == "http://www.zillow.com/mortgage-rates/wa/seattle/"
+    
+    data.links.count.should == 8
+    
+    data.charts.count.should == 6  
+    data.charts['Median Condo Value'].should == "http://www.zillow.com/app?chartType=affordability_avgCondoValue&graphType=barChart&regionId=250017&regionType=8&service=chart"
+    
+    data.affordability_data.count.should == 20
+    data.affordability_data['Zillow Home Value Index'][:neighborhood].value.should == "305200"
+    data.affordability_data['Zillow Home Value Index'][:neighborhood].type.should == "USD"
+    data.affordability_data['Median Single Family Home Value'][:city].value.should == "377000"
+    data.affordability_data['Median Condo Value'][:nation].value.should == "155800"
+    
+    data.census_data.count.should == 7
+    data.census_data['HomeSize']['<1000sqft'].value.should == "0.3922527265889"
+    data.census_data['HomeSize']['<1000sqft'].type.should == "percent"
+    data.census_data['HomeSize']['1800-2400sqft'].value.should == "0.0699511094396"
+    data.census_data['HomeType']['Other'].value.should == "1.9343463444890998"
+    data.census_data['HomeType']['SingleFamily'].value.should == "0.1712158808933"
+    data.census_data['Occupancy']['Rent'].value.should == "0.64971382"
+    data.census_data['Occupancy']['Rent'].type.should == "percent"
+    data.census_data['AgeDecade']['40s'].value.should == "0.159760457231474"
+    data.census_data['AgeDecade']['40s'].type.should == "percent"
+    data.census_data['Household']['NoKids'].value.should == "0.850066140827795"
+    data.census_data['Household']['NoKids'].type.should == "percent"
+    
+    data.metrics.count.should == 3
+    data.metrics['BuiltYear']['<1900'].value.should == "0.0419354838709"
+    data.metrics['BuiltYear']['<1900'].type.should == "percent"
+    data.metrics['BuiltYear']['1940-1959'].value.should == "0.0537634408602"
+    data.metrics['BuiltYear']['1940-1959'].type.should == "percent"
+    data.metrics['People Data']['Median Household Income'][:neighborhood].value.should == "41202.9453206937"
+    data.metrics['People Data']['Single Females'][:city].value.should == "0.187486853578992"
+    data.metrics['People Data']['Average Commute Time (Minutes)'][:nation].value.should == "26.375545725891282"
+    
+    data.segmentation.count.should == 3
+    data.segmentation["Makin' It Singles"][:name].should == "Upper-scale urban singles."
+    data.segmentation["Makin' It Singles"][:description].should == "Pre-middle-age to middle-age singles with upper-scale incomes. May or may not own their own home. Most have college educations and are employed in mid-management professions."
+    data.segmentation['Aspiring Urbanites'][:name].should == "Urban singles with moderate income."
+    data.segmentation['Aspiring Urbanites'][:description].should == "Low- to middle-income singles over a wide age range. Some have a college education. They work in a variety of occupations, including some management-level positions."
+    
+    data.characteristics.count.should == 4
+    data.characteristics['Education'].should include("Bachelor's degrees")
+    data.characteristics['Employment'].should include("Work in office and administrative support occupations")
+    data.characteristics['People & Culture'].should include("Divorced females")
+    data.characteristics['Transportation'].should include("Get to work by bus")
+  end
+end
+
+describe Rubillow::Models::RegionChildren do
+  it "populates the data" do
+    data = Rubillow::Models::RegionChildren.new(get_xml('get_region_children.xml'))
+    
+    data.region.id.should == "16037"
+    data.regions.count.should == 107
+    data.regions[0].id.should == "343997"
+  end
+end
+
+describe Rubillow::Models::RegionChart do
+  it "populates the results" do
+    data = Rubillow::Models::RegionChart.new(get_xml('get_region_chart.xml'))
+    
+    data.width.should == 300
+    data.height.should == 150
+    data.url.should == "http://www.zillow.com/app?chartDuration=1year&chartType=partner&cityRegionId=16037&countyRegionId=0&height=150&nationRegionId=0&neighborhoodRegionId=0&page=webservice%2FGetRegionChart&service=chart&showCity=true&showPercent=true&stateRegionId=0&width=300&zipRegionId=0"
+    data.link.should == "http://www.zillow.com/homes/Seattle-WA/"
+    data.links.count.should == 3
+  end
+  
+  it "should format correctly for HTML" do
+    data = Rubillow::Models::RegionChart.new(get_xml('get_region_chart.xml'))
+    
+    data.to_html.should == "<a href='http://www.zillow.com/homes/Seattle-WA/'><img src='http://www.zillow.com/app?chartDuration=1year&chartType=partner&cityRegionId=16037&countyRegionId=0&height=150&nationRegionId=0&neighborhoodRegionId=0&page=webservice%2FGetRegionChart&service=chart&showCity=true&showPercent=true&stateRegionId=0&width=300&zipRegionId=0' height='150' width='300' /></a>"
   end
 end
