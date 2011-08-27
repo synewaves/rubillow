@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MonthlyPayments:paymentsSummary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MonthlyPayments="http://www.zillow.com/static/xsd/MonthlyPayments.xsd" xsi:schemaLocation="http://www.zillow.com/static/xsd/MonthlyPayments.xsd http://www.zillowstatic.com/vstatic/6b4ea3e571a1ef97dd8f1e6be94b2725/static/xsd/MonthlyPayments.xsd">
+  <request>
+    <price>300000</price>
+    <down>15</down>
+    <zip>98104</zip>
+  </request>
+  <message>
+    <text>Request successfully processed</text>
+    <code>0</code>
+  </message>
+  <response>
+    <payment loanType="thirtyYearFixed">
+      <rate>4.01</rate>
+      <monthlyPrincipalAndInterest>1219</monthlyPrincipalAndInterest>
+      <monthlyMortgageInsurance>93</monthlyMortgageInsurance>
+    </payment>
+    <payment loanType="fifteenYearFixed">
+      <rate>3.27</rate>
+      <monthlyPrincipalAndInterest>1795</monthlyPrincipalAndInterest>
+      <monthlyMortgageInsurance>93</monthlyMortgageInsurance>
+    </payment>
+    <payment loanType="fiveOneARM">
+      <rate>3.27</rate>
+      <monthlyPrincipalAndInterest>1039</monthlyPrincipalAndInterest>
+      <monthlyMortgageInsurance>93</monthlyMortgageInsurance>
+    </payment>
+    <downPayment>45000</downPayment>
+    <monthlyPropertyTaxes>193</monthlyPropertyTaxes>
+    <monthlyHazardInsurance>50</monthlyHazardInsurance>
+  </response>
+</MonthlyPayments:paymentsSummary>
+<!-- H:119  T:14ms  S:792  R:Fri Aug 26 13:04:02 PDT 2011  B:3.0.121144.20110823141116-comp_rel_b -->

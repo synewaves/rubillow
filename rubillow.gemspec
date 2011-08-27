@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Matthew Vince"]
   s.email       = ["rubillow@matthewvince.com"]
   s.homepage    = "https://github.com/synewaves/rubillow"
-  s.summary     = %q{Ruby library to access the Zilow API}
-  s.description = %q{Provides easy access to the Zillow API using Ruby}
+  s.summary     = "Ruby library to access the Zillow API"
+  s.description = "Ruby library to access the Zillow API"
 
   s.rubyforge_project = "rubillow"
 
@@ -18,7 +18,9 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  # specify any dependencies here; for example:
   s.add_development_dependency "rspec", "~> 2.6"
-  # s.add_runtime_dependency "rest-client"
+  s.add_development_dependency "mocha", "0.9.8"
+  s.add_development_dependency "bourne", "~> 1.0"
+  s.add_runtime_dependency "nokogiri", "~> 1.5.0"
+  s.add_runtime_dependency "activesupport", "~> 3.0.10"
 end

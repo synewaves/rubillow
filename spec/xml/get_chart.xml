@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Chart:chart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Chart="http://www.zillow.com/static/xsd/Chart.xsd" xsi:schemaLocation="http://www.zillow.com/static/xsd/Chart.xsd http://www.zillowstatic.com/vstatic/6b4ea3e571a1ef97dd8f1e6be94b2725/static/xsd/Chart.xsd">
+  <request>
+    <zpid>48749425</zpid>
+    <unit-type>percent</unit-type>
+    <width>300</width>
+    <height>150</height>
+  </request>
+  <message>
+    <text>Request successfully processed</text>
+    <code>0</code>
+  </message>
+  <response>
+    <url>http://www.zillow.com/app?chartDuration=1year&amp;chartType=partner&amp;height=150&amp;page=webservice%2FGetChart&amp;service=chart&amp;showPercent=true&amp;width=300&amp;zpid=48749425</url>
+    <graphsanddata>http://www.zillow.com/homedetails/2114-Bigelow-Ave-N-Seattle-WA-98109/48749425_zpid/#charts-and-data</graphsanddata>
+  </response>
+</Chart:chart>
+<!-- H:120  T:11ms  S:233  R:Fri Aug 26 12:58:24 PDT 2011  B:3.0.121144.20110823141116-comp_rel_b -->

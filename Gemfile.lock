@@ -2,11 +2,20 @@ PATH
   remote: .
   specs:
     rubillow (0.0.1)
+      activesupport (~> 3.0.10)
+      nokogiri (~> 1.5.0)
 
 GEM
   remote: http://rubygems.org/
   specs:
+    activesupport (3.0.10)
+    bourne (1.0)
+      mocha (= 0.9.8)
     diff-lcs (1.1.2)
+    mocha (0.9.8)
+      rake
+    nokogiri (1.5.0)
+    rake (0.9.2)
     rspec (2.6.0)
       rspec-core (~> 2.6.0)
       rspec-expectations (~> 2.6.0)
@@ -20,5 +29,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bourne (~> 1.0)
+  mocha (= 0.9.8)
   rspec (~> 2.6)
   rubillow!

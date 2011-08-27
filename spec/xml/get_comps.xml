@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Comps:comps xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Comps="http://www.zillow.com/static/xsd/Comps.xsd" xsi:schemaLocation="http://www.zillow.com/static/xsd/Comps.xsd http://www.zillowstatic.com/vstatic/6b4ea3e571a1ef97dd8f1e6be94b2725/static/xsd/Comps.xsd">
+  <request>
+    <zpid>48749425</zpid>
+    <count>5</count>
+  </request>
+  <message>
+    <text>Request successfully processed</text>
+    <code>0</code>
+  </message>
+  <response>
+    <properties>
+      <principal>
+        <zpid>48749425</zpid>
+        <links>
+          <homedetails>http://www.zillow.com/homedetails/2114-Bigelow-Ave-N-Seattle-WA-98109/48749425_zpid/</homedetails>
+          <graphsanddata>http://www.zillow.com/homedetails/2114-Bigelow-Ave-N-Seattle-WA-98109/48749425_zpid/#charts-and-data</graphsanddata>
+          <mapthishome>http://www.zillow.com/homes/48749425_zpid/</mapthishome>
+          <myestimator>http://www.zillow.com/myestimator/Edit.htm?zprop=48749425</myestimator>
+          <myzestimator deprecated="true">http://www.zillow.com/myestimator/Edit.htm?zprop=48749425</myzestimator>
+          <comparables>http://www.zillow.com/homes/comps/48749425_zpid/</comparables>
+        </links>
+        <address>
+          <street>2114 Bigelow Ave N</street>
+          <zipcode>98109</zipcode>
+          <city>Seattle</city>
+          <state>WA</state>
+          <latitude>47.637933</latitude>
+          <longitude>-122.347938</longitude>
+        </address>
+        <zestimate>
+          <amount currency="USD">1032000</amount>
+          <last-updated>08/24/2011</last-updated>
+          <oneWeekChange deprecated="true"/>
+          <valueChange duration="30" currency="USD">5900</valueChange>
+          <valuationRange>
+            <low currency="USD">866880</low>
+            <high currency="USD">1259040</high>
+          </valuationRange>
+          <percentile>95</percentile>
+        </zestimate>
+        <localRealEstate>
+          <region id="271856" type="neighborhood" name="East Queen Anne">
+            <links>
+              <overview>http://www.zillow.com/local-info/WA-Seattle/East-Queen-Anne/r_271856/</overview>
+              <forSaleByOwner>http://www.zillow.com/homes/fsbo/East-Queen-Anne-Seattle-WA/</forSaleByOwner>
+              <forSale>http://www.zillow.com/homes/for_sale/East-Queen-Anne-Seattle-WA/</forSale>
+            </links>
+          </region>
+        </localRealEstate>
+      </principal>
+      <comparables>
+        <comp score="0.0813344">
+          <zpid>48768095</zpid>
+          <links>
+            <homedetails>http://www.zillow.com/homedetails/2538-Mayfair-Ave-N-Seattle-WA-98109/48768095_zpid/</homedetails>
+            <graphsanddata>http://www.zillow.com/homedetails/2538-Mayfair-Ave-N-Seattle-WA-98109/48768095_zpid/#charts-and-data</graphsanddata>
+            <mapthishome>http://www.zillow.com/homes/48768095_zpid/</mapthishome>
+            <myestimator>http://www.zillow.com/myestimator/Edit.htm?zprop=48768095</myestimator>
+            <myzestimator deprecated="true">http://www.zillow.com/myestimator/Edit.htm?zprop=48768095</myzestimator>
+            <comparables>http://www.zillow.com/homes/comps/48768095_zpid/</comparables>
+          </links>
+          <address>
+            <street>2538 Mayfair Ave N</street>
+            <zipcode>98109</zipcode>
+            <city>Seattle</city>
+            <state>WA</state>
+            <latitude>47.642566</latitude>
+            <longitude>-122.352512</longitude>
+          </address>
+          <zestimate>
+            <amount currency="USD">584400</amount>
+            <last-updated>08/24/2011</last-updated>
+            <oneWeekChange deprecated="true"/>
+            <valueChange duration="30" currency="USD">-100</valueChange>
+            <valuationRange>
+              <low currency="USD">449988</low>
+              <high currency="USD">625308</high>
+            </valuationRange>
+            <percentile>75</percentile>
+          </zestimate>
+          <localRealEstate>
+            <region id="271942" type="neighborhood" name="North Queen Anne">
+              <links>
+                <overview>http://www.zillow.com/local-info/WA-Seattle/North-Queen-Anne/r_271942/</overview>
+                <forSaleByOwner>http://www.zillow.com/homes/fsbo/North-Queen-Anne-Seattle-WA/</forSaleByOwner>
+                <forSale>http://www.zillow.com/homes/for_sale/North-Queen-Anne-Seattle-WA/</forSale>
+              </links>
+            </region>
+          </localRealEstate>
+        </comp>
+        <comp score="0.0674681">
+          <zpid>48690326</zpid>
+          <links>
+            <homedetails>http://www.zillow.com/homedetails/1612-Warren-Ave-N-Seattle-WA-98109/48690326_zpid/</homedetails>
+            <graphsanddata>http://www.zillow.com/homedetails/1612-Warren-Ave-N-Seattle-WA-98109/48690326_zpid/#charts-and-data</graphsanddata>
+            <mapthishome>http://www.zillow.com/homes/48690326_zpid/</mapthishome>
+            <myestimator>http://www.zillow.com/myestimator/Edit.htm?zprop=48690326</myestimator>
+            <myzestimator deprecated="true">http://www.zillow.com/myestimator/Edit.htm?zprop=48690326</myzestimator>
+            <comparables>http://www.zillow.com/homes/comps/48690326_zpid/</comparables>
+          </links>
+          <address>
+            <street>1612 Warren Ave N</street>
+            <zipcode>98109</zipcode>
+            <city>Seattle</city>
+            <state>WA</state>
+            <latitude>47.633573</latitude>
+            <longitude>-122.354064</longitude>
+          </address>
+          <zestimate>
+            <amount currency="USD">1167500</amount>
+            <last-updated>08/24/2011</last-updated>
+            <oneWeekChange deprecated="true"/>
+            <valueChange duration="30" currency="USD">85400</valueChange>
+            <valuationRange>
+              <low currency="USD">898975</low>
+              <high currency="USD">1482725</high>
+            </valuationRange>
+            <percentile>97</percentile>
+          </zestimate>
+          <localRealEstate>
+            <region id="271856" type="neighborhood" name="East Queen Anne">
+              <links>
+                <overview>http://www.zillow.com/local-info/WA-Seattle/East-Queen-Anne/r_271856/</overview>
+                <forSaleByOwner>http://www.zillow.com/homes/fsbo/East-Queen-Anne-Seattle-WA/</forSaleByOwner>
+                <forSale>http://www.zillow.com/homes/for_sale/East-Queen-Anne-Seattle-WA/</forSale>
+              </links>
+            </region>
+          </localRealEstate>
+        </comp>
+        <comp score="0.0906162">
+          <zpid>48689869</zpid>
+          <links>
+            <homedetails>http://www.zillow.com/homedetails/1606-Nob-Hill-Ave-N-Seattle-WA-98109/48689869_zpid/</homedetails>
+            <graphsanddata>http://www.zillow.com/homedetails/1606-Nob-Hill-Ave-N-Seattle-WA-98109/48689869_zpid/#charts-and-data</graphsanddata>
+            <mapthishome>http://www.zillow.com/homes/48689869_zpid/</mapthishome>
+            <myestimator>http://www.zillow.com/myestimator/Edit.htm?zprop=48689869</myestimator>
+            <myzestimator deprecated="true">http://www.zillow.com/myestimator/Edit.htm?zprop=48689869</myzestimator>
+            <comparables>http://www.zillow.com/homes/comps/48689869_zpid/</comparables>
+          </links>
+          <address>
+            <street>1606 Nob Hill Ave N</street>
+            <zipcode>98109</zipcode>
+            <city>Seattle</city>
+            <state>WA</state>
+            <latitude>47.633416</latitude>
+            <longitude>-122.350494</longitude>
+          </address>
+          <zestimate>
+            <amount currency="USD">750100</amount>
+            <last-updated>08/24/2011</last-updated>
+            <oneWeekChange deprecated="true"/>
+            <valueChange duration="30" currency="USD">2700</valueChange>
+            <valuationRange>
+              <low currency="USD">652587</low>
+              <high currency="USD">877617</high>
+            </valuationRange>
+            <percentile>87</percentile>
+          </zestimate>
+          <localRealEstate>
+            <region id="271856" type="neighborhood" name="East Queen Anne">
+              <links>
+                <overview>http://www.zillow.com/local-info/WA-Seattle/East-Queen-Anne/r_271856/</overview>
+                <forSaleByOwner>http://www.zillow.com/homes/fsbo/East-Queen-Anne-Seattle-WA/</forSaleByOwner>
+                <forSale>http://www.zillow.com/homes/for_sale/East-Queen-Anne-Seattle-WA/</forSale>
+              </links>
+            </region>
+          </localRealEstate>
+        </comp>
+        <comp score="0.11865">
+          <zpid>48689978</zpid>
+          <links>
+            <homedetails>http://www.zillow.com/homedetails/352-Blaine-St-Seattle-WA-98109/48689978_zpid/</homedetails>
+            <graphsanddata>http://www.zillow.com/homedetails/352-Blaine-St-Seattle-WA-98109/48689978_zpid/#charts-and-data</graphsanddata>
+            <mapthishome>http://www.zillow.com/homes/48689978_zpid/</mapthishome>
+            <myestimator>http://www.zillow.com/myestimator/Edit.htm?zprop=48689978</myestimator>
+            <myzestimator deprecated="true">http://www.zillow.com/myestimator/Edit.htm?zprop=48689978</myzestimator>
+            <comparables>http://www.zillow.com/homes/comps/48689978_zpid/</comparables>
+          </links>
+          <address>
+            <street>352 Blaine St</street>
+            <zipcode>98109</zipcode>
+            <city>Seattle</city>
+            <state>WA</state>
+            <latitude>47.635005</latitude>
+            <longitude>-122.350517</longitude>
+          </address>
+          <zestimate>
+            <amount currency="USD">760000</amount>
+            <last-updated>08/24/2011</last-updated>
+            <oneWeekChange deprecated="true"/>
+            <valueChange duration="30" currency="USD">-400</valueChange>
+            <valuationRange>
+              <low currency="USD">661200</low>
+              <high currency="USD">881600</high>
+            </valuationRange>
+            <percentile>88</percentile>
+          </zestimate>
+          <localRealEstate>
+            <region id="271856" type="neighborhood" name="East Queen Anne">
+              <links>
+                <overview>http://www.zillow.com/local-info/WA-Seattle/East-Queen-Anne/r_271856/</overview>
+                <forSaleByOwner>http://www.zillow.com/homes/fsbo/East-Queen-Anne-Seattle-WA/</forSaleByOwner>
+                <forSale>http://www.zillow.com/homes/for_sale/East-Queen-Anne-Seattle-WA/</forSale>
+              </links>
+            </region>
+          </localRealEstate>
+        </comp>
+        <comp score="0.123937">
+          <zpid>48690151</zpid>
+          <links>
+            <homedetails>http://www.zillow.com/homedetails/161-Crockett-St-Seattle-WA-98109/48690151_zpid/</homedetails>
+            <graphsanddata>http://www.zillow.com/homedetails/161-Crockett-St-Seattle-WA-98109/48690151_zpid/#charts-and-data</graphsanddata>
+            <mapthishome>http://www.zillow.com/homes/48690151_zpid/</mapthishome>
+            <myestimator>http://www.zillow.com/myestimator/Edit.htm?zprop=48690151</myestimator>
+            <myzestimator deprecated="true">http://www.zillow.com/myestimator/Edit.htm?zprop=48690151</myzestimator>
+            <comparables>http://www.zillow.com/homes/comps/48690151_zpid/</comparables>
+          </links>
+          <address>
+            <street>161 Crockett St</street>
+            <zipcode>98109</zipcode>
+            <city>Seattle</city>
+            <state>WA</state>
+            <latitude>47.637268</latitude>
+            <longitude>-122.353885</longitude>
+          </address>
+          <zestimate>
+            <amount currency="USD">522600</amount>
+            <last-updated>08/24/2011</last-updated>
+            <oneWeekChange deprecated="true"/>
+            <valueChange duration="30" currency="USD">7900</valueChange>
+            <valuationRange>
+              <low currency="USD">433758</low>
+              <high currency="USD">627120</high>
+            </valuationRange>
+            <percentile>69</percentile>
+          </zestimate>
+          <localRealEstate>
+            <region id="271856" type="neighborhood" name="East Queen Anne">
+              <links>
+                <overview>http://www.zillow.com/local-info/WA-Seattle/East-Queen-Anne/r_271856/</overview>
+                <forSaleByOwner>http://www.zillow.com/homes/fsbo/East-Queen-Anne-Seattle-WA/</forSaleByOwner>
+                <forSale>http://www.zillow.com/homes/for_sale/East-Queen-Anne-Seattle-WA/</forSale>
+              </links>
+            </region>
+          </localRealEstate>
+        </comp>
+      </comparables>
+    </properties>
+  </response>
+</Comps:comps>
+<!-- H:117  T:49ms  S:4480  R:Fri Aug 26 13:01:00 PDT 2011  B:3.0.121144.20110823141116-comp_rel_b -->

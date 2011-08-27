@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SearchResults:searchresults xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SearchResults="http://www.zillow.com/static/xsd/SearchResults.xsd" xsi:schemaLocation="http://www.zillow.com/static/xsd/SearchResults.xsd http://www.zillowstatic.com/vstatic/6b4ea3e571a1ef97dd8f1e6be94b2725/static/xsd/SearchResults.xsd">
+  <request>
+    <address/>
+    <citystatezip/>
+  </request>
+  <message>
+    <text>Error: invalid or missing ZWSID parameter</text>
+    <code>2</code>
+    <limit-warning>true</limit-warning>
+  </message>
+</SearchResults:searchresults>
+<!-- H:117  T:0ms  S:150  R:Fri Aug 26 12:53:30 PDT 2011  B:3.0.121144.20110823141116-comp_rel_b -->

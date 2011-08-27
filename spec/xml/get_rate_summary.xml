@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RateSummary:rateSummary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RateSummary="http://www.zillow.com/static/xsd/RateSummary.xsd" xsi:schemaLocation="http://www.zillow.com/static/xsd/RateSummary.xsd http://www.zillowstatic.com/vstatic/6b4ea3e571a1ef97dd8f1e6be94b2725/static/xsd/RateSummary.xsd">
+  <request/>
+  <message>
+    <text>Request successfully processed</text>
+    <code>0</code>
+  </message>
+  <response>
+    <today>
+      <rate count="359" loanType="thirtyYearFixed">4.01</rate>
+      <rate count="246" loanType="fifteenYearFixed">3.27</rate>
+      <rate count="331" loanType="fiveOneARM">2.73</rate>
+    </today>
+    <lastWeek>
+      <rate count="51077" loanType="thirtyYearFixed">4.02</rate>
+      <rate count="36886" loanType="fifteenYearFixed">3.27</rate>
+      <rate count="36549" loanType="fiveOneARM">2.84</rate>
+    </lastWeek>
+  </response>
+</RateSummary:rateSummary>
+<!-- H:117  T:1ms  S:159  R:Fri Aug 26 13:02:35 PDT 2011  B:3.0.121144.20110823141116-comp_rel_b -->
