@@ -1,12 +1,15 @@
 module Rubillow
   module Models
-    # 
+    # Common data for responses containing images
     module Images
+      # @return [Array] List of image urls
       attr_accessor :images
+      # @return [Integer] number of images available (doesn't always match @images.count)
       attr_accessor :images_count
       
       protected
       
+      # @private
       def extract_images(xml)
         @images_count = xml.xpath('//images/count').text
         

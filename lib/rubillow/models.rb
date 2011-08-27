@@ -3,15 +3,25 @@ require "active_support/core_ext/string"
 require "active_support/inflector"
 
 module Rubillow
+  # Sub module for returned and parsed web service data
   module Models
-    # 
+    # Base class for data models
     class Base
+      # @return [String] the raw XML content from the service
       attr_accessor :xml
+      # @private
       attr_accessor :parser
+      # @return [String] response message
       attr_accessor :message
+      # @return [Integer] response code
       attr_accessor :code
+      # @return [Boolean] nearing API's daily request limit
       attr_accessor :near_limit
     
+      # @private
+      # Initialize the model
+      #
+      # @param [String] xml the raw XML from the service
       def initialize(xml)
         if !xml.blank?
           @xml = xml
@@ -20,6 +30,8 @@ module Rubillow
         end
       end
     
+      # Was the request successful?
+      # @return [Boolean] +true+ on successful request
       def success?
         @code.to_i == 0
       end
@@ -27,6 +39,7 @@ module Rubillow
       protected
       
       # @private
+      # Parses the xml content
       def parse
         @message = @parser.xpath('//message/text').text
         @code = @parser.xpath('//message/code').text.to_i

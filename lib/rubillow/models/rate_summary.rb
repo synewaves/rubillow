@@ -1,12 +1,15 @@
 module Rubillow
   module Models
-    #
+    # Rate summary information
     class RateSummary < Base
+      # @return [Hash] today's rates (:thirty_year_fixed, :fifteen_year_fixed, :five_one_arm).
       attr_accessor :today
+      # @return [Hash] last week's rates (:thirty_year_fixed, :fifteen_year_fixed, :five_one_arm).
       attr_accessor :last_week
       
       protected
       
+      # @private
       def parse
         super
         

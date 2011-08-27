@@ -1,18 +1,27 @@
 module Rubillow
   module Models
+    # Demographics data
     class Demographics < Base
       include Linkable
       
+      # @return [Models::Region] region data.
       attr_accessor :region
+      # @return [Hash] Charts (key: name, value: url).
       attr_accessor :charts
+      # @return [Hash] Metrics ([high level point][low level point]).
       attr_accessor :metrics
+      # @return [Hash] Affordability metrics (key: name, value: value).
       attr_accessor :affordability_data
+      # @return [Hash] US Census metrics ([high level point][low level point]).
       attr_accessor :census_data
+      # @return [Hash] Segmentation metrics (key: name, value: [:name, :description])
       attr_accessor :segmentation
+      # @return [Hash] Characteristics metrics ([high level point] -> hash)
       attr_accessor :characteristics
       
       protected
       
+      # @private
       def parse
         super
         
@@ -65,12 +74,14 @@ module Rubillow
         end
       end
       
+      # @private
       def extract_affordability_data(xml)
         xml.xpath('data').children.each do |data|
           @affordability_data[data.xpath('name').text] = extract_metrics(data)
         end
       end
       
+      # @private
       def extract_census_data(xml, type)
         @census_data[type] = {}
         
@@ -79,6 +90,7 @@ module Rubillow
         end
       end
       
+      # @private
       def extract_data(xml, type)
         if @metrics[type].nil?
           @metrics[type] = {}
@@ -89,6 +101,7 @@ module Rubillow
         end
       end
       
+      # @private
       def extract_metrics(xml)
         if xml.xpath('values').empty?
           DemographicValue.new(xml.xpath('value'))

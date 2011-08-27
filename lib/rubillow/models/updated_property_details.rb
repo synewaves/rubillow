@@ -1,23 +1,34 @@
 module Rubillow
   module Models
+    # List of updated attributes for a property.
     class UpdatedPropertyDetails < Base
       include Zpidable
       include Addressable
       include Linkable
       include Images
       
+      # @return [Hash] number of page views (:current_month, :total).
       attr_accessor :page_views
+      # @return [String] price.
       attr_accessor :price
+      # @return [String] neighborhood.
       attr_accessor :neighborhood
+      # @return [String] elementary school's name.
       attr_accessor :elementary_school
+      # @return [String] middle school's name.
       attr_accessor :middle_school
+      # @return [String] school district's name.
       attr_accessor :school_district
+      # @return [String] Realtor provided home description
       attr_accessor :home_description
+      # @return [Hash] posting information 
       attr_accessor :posting
+      # @return [Hash] list of edited facts
       attr_accessor :edited_facts
       
       protected
       
+      # @private
       def parse
         super
         

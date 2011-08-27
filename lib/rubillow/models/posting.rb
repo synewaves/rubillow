@@ -1,6 +1,6 @@
 module Rubillow
   module Models
-    # 
+    # A posting
     class Posting < Base
       include Zpidable
       include Addressable
@@ -8,8 +8,9 @@ module Rubillow
       include PropertyBasics
       include Images
       
+      # @return [Date] last date data was refreshed.
       attr_accessor :last_refreshed_date
-      attr_accessor :images_count
+      # @return [String] price
       attr_accessor :price
       
       protected

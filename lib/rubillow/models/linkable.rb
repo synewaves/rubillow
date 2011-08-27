@@ -1,11 +1,13 @@
 module Rubillow
   module Models
-    #
+    # Common data for responses containing links
     module Linkable
+      # @return [Hash] Links (format: :name => 'url')
       attr_accessor :links
       
       protected
       
+      # @private
       def extract_links(xml)
         @links = {}
         

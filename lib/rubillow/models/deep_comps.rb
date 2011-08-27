@@ -1,12 +1,15 @@
 module Rubillow
   module Models
-    # 
+    # List of comps for a given property with deep data.
     class DeepComps < Base
+      # @return [Models::DeepSearchResult] principal property.
       attr_accessor :principal
+      # @return [Hash] comparables list (key => comparable's score, value => {Models::DeepSearchResult}).
       attr_accessor :comparables
       
       protected
       
+      # @private
       def parse
         super
         

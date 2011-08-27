@@ -1,11 +1,13 @@
 module Rubillow
   module Models
-    #
+    # Common data for responses containing address information.
     module Addressable
+      # @return [Hash] Address information (all are strings, keys are: :street, :city, :state, :zipcode, :latitude, :longitude).
       attr_accessor :address
       
       protected
       
+      # @private
       def extract_address(xml)
         address = xml.xpath('//address')
         if !address.empty?

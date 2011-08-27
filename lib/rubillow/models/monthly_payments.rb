@@ -1,16 +1,23 @@
 module Rubillow
   module Models
-    #
+    # Monthly payment information
     class MonthlyPayments < Base
+      # @return [Hash] 30 year fixed rate data (:rate, :principal_and_interest, :insurance).
       attr_accessor :thirty_year_fixed
+      # @return [Hash] 15 year fixed rate data (:rate, :principal_and_interest, :insurance).
       attr_accessor :fifteen_year_fixed
+      # @return [Hash] 5/1 fixed rate data (:rate, :principal_and_interest, :insurance).
       attr_accessor :five_one_arm
+      # @return [String] down payment amount.
       attr_accessor :down_payment
+      # @return [String] monthly property taxes (estimated).
       attr_accessor :monthly_property_taxes
+      # @return [String] monthyly hazard insurance (estimated).
       attr_accessor :monthly_hazard_insurance
       
       protected
       
+      # @private
       def parse
         super
         

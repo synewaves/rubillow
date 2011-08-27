@@ -1,25 +1,35 @@
 module Rubillow
   module Models
-    # 
+    # Common data for responses containing Zestimate information
     module Zestimateable
       include Zpidable
       include Addressable
       include Linkable
       
-      attr_accessor :zpid
+      # @return [String] price
       attr_accessor :price
+      # @return [Date] last updated date
       attr_accessor :last_updated
+      # @return [Hash] valuation range (values: Strings, keys: :low, :high)
       attr_accessor :valuation_range
+      # @return [String] change value
       attr_accessor :change
+      # @return [String] duration of change value
       attr_accessor :change_duration
+      # @return [String] percentile
       attr_accessor :percentile
+      # @return [Hash] local real estate links (values: URL strings, keys: :overview, :for_sale_by_owner, :for_sale)
       attr_accessor :local_real_estate
+      # @return [String] region name
       attr_accessor :region
+      # @return [String] region id
       attr_accessor :region_id
+      # @return [String] region type
       attr_accessor :region_type
       
       protected
       
+      # @private
       def extract_zestimate(xml)
         extract_zpid(xml)
         extract_links(xml)

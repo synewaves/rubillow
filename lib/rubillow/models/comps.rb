@@ -1,12 +1,15 @@
 module Rubillow
   module Models
-    # 
+    # List of comps for a property.
     class Comps < Base
+      # @return [Models::SearchResult] principal property.
       attr_accessor :principal
+      # @return [Hash] comparables list (key => comparable's score, value => {Models::SearchResult}).
       attr_accessor :comparables
       
       protected
       
+      # @private
       def parse
         super
         
