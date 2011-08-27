@@ -1,4 +1,5 @@
 require File.expand_path("../../lib/rubillow", __FILE__)
+require 'rspec'
 require "bourne"
 
 Dir[File.expand_path("../support/**/*.rb", __FILE__)].each do |file|

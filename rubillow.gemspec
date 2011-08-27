@@ -18,9 +18,14 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_development_dependency "rspec", "~> 2.6"
-  s.add_development_dependency "mocha", "0.9.8"
-  s.add_development_dependency "bourne", "~> 1.0"
-  s.add_runtime_dependency "nokogiri", "~> 1.5.0"
+  s.add_development_dependency "rspec",     "~> 2.6"
+  s.add_development_dependency "mocha",     "~> 0.9.8"
+  s.add_development_dependency "bourne",    "~> 1.0"
+  s.add_development_dependency "yard",      ">= 0.6.8"
+  s.add_development_dependency "bluecloth", ">= 2.1.0"
+  s.add_development_dependency "rcov",      "~> 0.9.10"
+  
+  s.add_runtime_dependency "nokogiri",      "~> 1.5.0"
   s.add_runtime_dependency "activesupport", "~> 3.0.10"
+  s.add_runtime_dependency "i18n",          "~> 0.6.0"
 end

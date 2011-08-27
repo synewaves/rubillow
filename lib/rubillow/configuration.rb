@@ -6,7 +6,6 @@ module Rubillow
     attr_accessor :zwsid
     attr_accessor :http_open_timeout
     attr_accessor :http_read_timeout
-    attr_accessor :http_proxy
     
     def initialize
       self.host              = "www.zillow.com"

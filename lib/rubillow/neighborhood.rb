@@ -1,5 +1,21 @@
 module Rubillow
+  # Interface for the Neighborhood API.
+  # 
+  # Read the more about this API at: {http://www.zillow.com/webtools/neighborhood-data/}
   class Neighborhood
+    # Retrieve demographic data for a given region.
+    #
+    # Read more at: {http://www.zillow.com/howto/api/GetDemographics.htm}.
+    #
+    # \* At least regionid or state/city, city/neighborhood, or zip options are required.
+    # 
+    # @param [Hash] options The options for the API request.
+    # @option options [String] :regionid      The id of the region (required *)
+    # @option options [String] :state         The state of the region (required *)
+    # @option options [String] :city          The city of the region (required *)
+    # @option options [String] :neighborhood  The neighborhood of the region (required *)
+    # @option options [String] :zip           The zopcode of the region (required *)
+    # @return [Models::Demographics] Region demographics data.
     def self.demographics(options = {})
       options = {
         :zws_id => Rubillow.configuration.zwsid,
@@ -17,6 +33,19 @@ module Rubillow
       Models::Demographics.new(Rubillow::Request.get("GetDemographics", options))
     end
     
+    # Retrieve sub-regions for a region
+    #
+    # Read more at: {http://www.zillow.com/howto/api/GetRegionChildren.htm}.
+    #
+    # \* At least regionid or state options are required.
+    # 
+    # @param [Hash] options The options for the API request.
+    # @option options [String] :regionid   The id of the region (required *)
+    # @option options [String] :state      The state of the region (required *)
+    # @option options [String] :county     The county of the region
+    # @option options [String] :city       The city of the region
+    # @option options [String] :childType  The type of regions to retrieve (available types: +state+, +county+, +city+, +zipcode+, and +neighborhood+)
+    # @return [Models::RegionChildren] Region children list.
     def self.region_children(options = {})
       options = {
         :zws_id => Rubillow.configuration.zwsid,
@@ -34,6 +63,20 @@ module Rubillow
       Models::RegionChildren.new(Rubillow::Request.get("GetRegionChildren", options))
     end
     
+    # Retrieve a chart for the specified region.
+    #
+    # Read more at: {http://www.zillow.com/howto/api/GetRegionChart.htm}.
+    # 
+    # @param [Hash] options The options for the API request.
+    # @option options [String]  :city           The city of the region
+    # @option options [String]  :state          The state of the region
+    # @option options [String]  :neighborhood   The county of the region
+    # @option options [String]  :zip            The zipcode of the region
+    # @option options [String]  :unit-type      Show the percent change (+percent+), or dollar change (+dollar+). (required)
+    # @option options [Integer] :width          The width of the image; between 200 and 600, inclusive.
+    # @option options [Integer] :height         The height of the image; between 100 and 300, inclusive.
+    # @option options [Integer] :chartDuration  The duration of past data to show. Valid values are +1year+, +5years+ and +10years+. Defaults to +1year+.
+    # @return [Models::RegionChart] Region chart.
     def self.region_chart(options = {})
       options = {
         :zws_id => Rubillow.configuration.zwsid,

@@ -1,5 +1,16 @@
 module Rubillow
+  # Interface for the Home Valuation API.
+  # 
+  # Read the more about this API at: {http://www.zillow.com/howto/api/HomeValuationAPIOverview.htm}
   class HomeValuation
+    # Retrieve a property by the specified address.
+    #
+    # Read more at: {http://www.zillow.com/howto/api/GetSearchResults.htm}.
+    # 
+    # @param [Hash] options The options for the API request.
+    # @option options [String] :address       The address of the property to search. (required)
+    # @option options [String] :citystatezip  The city+state combination and/or ZIP code for which to search. Note that giving both city and state is required. Using just one will not work. (required)
+    # @return [Models::SearchResult] Property information.
     def self.search_results(options = {})
       options = {
         :zws_id => Rubillow.configuration.zwsid,
@@ -17,6 +28,13 @@ module Rubillow
       Models::SearchResult.new(Rubillow::Request.get("GetSearchResults", options))
     end
     
+    # Retrieve a zestimate for the specified property.
+    #
+    # Read more at: {http://www.zillow.com/howto/api/GetZestimate.htm}.
+    # 
+    # @param [Hash] options The options for the API request.
+    # @option options [Integer] :zpid   The Zillow Property ID of the property. (required)
+    # @return [Models::SearchResult] Property pricing information.
     def self.zestimate(options = {})
       options = {
         :zws_id => Rubillow.configuration.zwsid,
@@ -30,11 +48,25 @@ module Rubillow
       Models::SearchResult.new(Rubillow::Request.get("GetZestimate", options))
     end
 
+    # Retrieve a chart for the specified property.
+    #
+    # Read more at: {http://www.zillow.com/howto/api/GetChart.htm}.
+    # 
+    # @param [Hash] options The options for the API request.
+    # @option options [Integer] :zpid           The Zillow Property ID of the property. (required)
+    # @option options [String]  :unit-type      Show the percent change ("percent"), or dollar change ("dollar"). (required)
+    # @option options [Integer] :width          The width of the image; between 200 and 600, inclusive.
+    # @option options [Integer] :height         The height of the image; between 100 and 300, inclusive.
+    # @option options [Integer] :chartDuration  The duration of past data to show. Valid values are "1year", "5years" and "10years". If unspecified, the value defaults to "1year".
+    # @return [Models::PropertyChart] Property chart.
     def self.chart(options = {})
       options = {
         :zws_id => Rubillow.configuration.zwsid,
         :zpid => nil,
         :unit_type => nil,
+        :width => nil,
+        :height => nil,
+        :chartDuration => nil,
       }.merge!(options)
     
       if options[:zpid].nil?
@@ -47,6 +79,14 @@ module Rubillow
       Models::PropertyChart.new(Rubillow::Request.get("GetChart", options))
     end
 
+    # Retrieve a list of comps for the specified property.
+    #
+    # Read more at: {http://www.zillow.com/howto/api/GetComps.htm}.
+    # 
+    # @param [Hash] options The options for the API request.
+    # @option options [Integer] :zpid   The Zillow Property ID of the property. (required)
+    # @option options [Integer] :count  The number of comps to return, between 1 and 25 inclusive. (required)
+    # @return [Models::Comps] Comps Property information and comps list.
     def self.comps(options = {})
       options = {
         :zws_id => Rubillow.configuration.zwsid,

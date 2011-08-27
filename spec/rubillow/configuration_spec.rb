@@ -7,5 +7,4 @@ describe Rubillow::Configuration do
   it { should have_configuration_option(:zwsid).default(nil) }
   it { should have_configuration_option(:http_open_timeout).default(2) }
   it { should have_configuration_option(:http_read_timeout).default(2) }
-  it { should have_configuration_option(:http_proxy).default(nil) }
 end

@@ -1,5 +1,16 @@
 module Rubillow
+  # Interface for the Property Details API.
+  # 
+  # Read the more about this API at: {http://www.zillow.com/howto/api/PropertyDetailsAPIOverview.htm}
   class PropertyDetails
+    # Retrieve extended details for a property.
+    #
+    # Read more at: {http://www.zillow.com/howto/api/GetDeepSearchResults.htm}.
+    #
+    # @param [Hash] options The options for the API request.
+    # @option options [String] :address       The address of the property to search. (required)
+    # @option options [String] :citystatezip  The city+state combination and/or ZIP code for which to search. Note that giving both city and state is required. Using just one will not work. (required)
+    # @return [Models::DeepSearchResult] Extended property details.
     def self.deep_search_results(options = {})
       options = {
         :zws_id => Rubillow.configuration.zwsid,
@@ -17,6 +28,14 @@ module Rubillow
       Models::DeepSearchResult.new(Rubillow::Request.get("GetDeepSearchResults", options))
     end
     
+    # Retrieve extended details for property and its comps.
+    #
+    # Read more at: {http://www.zillow.com/howto/api/GetDeepComps.htm}.
+    #
+    # @param [Hash] options The options for the API request.
+    # @option options [Integer] :zpid   The Zillow Property ID of the property. (required)
+    # @option options [Integer] :count  The number of comps to return, between 1 and 25 inclusive. (required)
+    # @return [Models::DeepComps] Extended property and comp details.
     def self.deep_comps(options = {})
       options = {
         :zws_id => Rubillow.configuration.zwsid,
@@ -34,6 +53,13 @@ module Rubillow
       Models::DeepComps.new(Rubillow::Request.get("GetDeepComps", options))
     end
     
+    # Retrieve updated property facts for a given property.
+    #
+    # Read more at: {http://www.zillow.com/howto/api/GetUpdatedPropertyDetails.htm}.
+    #
+    # @param [Hash] options The options for the API request.
+    # @option options [Integer] :zpid   The Zillow Property ID of the property. (required)
+    # @return [Models::UpdatedPropertyDetails] Updated property information.
     def self.updated_property_details(options = {})
       options = {
         :zws_id => Rubillow.configuration.zwsid,

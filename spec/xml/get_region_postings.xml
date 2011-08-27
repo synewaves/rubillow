@@ -2598,8 +2598,63 @@
       </result>
     </forSaleByAgent>
     <reportForSale>
-      <count>0</count>
+      <count>1</count>
+      <result>
+        <lastRefreshedDate>2011-04-22 00:00:00.0</lastRefreshedDate>
+        <property>
+          <zpid>48775020</zpid>
+          <links>
+            <homedetails>http://www.zillow.com/homedetails/2222-Everett-Ave-E-Seattle-WA-98102/48775020_zpid/</homedetails>
+          </links>
+          <address>
+            <street>2222 Everett Ave E</street>
+            <zipcode>98102</zipcode>
+            <city>Seattle</city>
+            <state>WA</state>
+            <latitude>47.63903</latitude>
+            <longitude>-122.314594</longitude>
+          </address>
+          <useCode>Single Family</useCode>
+          <lotSizeSqFt>19946</lotSizeSqFt>
+          <finishedSqFt>7630</finishedSqFt>
+          <bathrooms>3.5</bathrooms>
+          <bedrooms>4</bedrooms>
+        </property>
+        <images>
+          <count>2</count>
+        </images>
+        <price>2500000</price>
+      </result>
     </reportForSale>
+    <forRent>
+      <count>1</count>
+      <result>
+        <lastRefreshedDate>2011-04-22 00:00:00.0</lastRefreshedDate>
+        <property>
+          <zpid>48775020</zpid>
+          <links>
+            <homedetails>http://www.zillow.com/homedetails/2222-Everett-Ave-E-Seattle-WA-98102/48775020_zpid/</homedetails>
+          </links>
+          <address>
+            <street>2222 Everett Ave E</street>
+            <zipcode>98102</zipcode>
+            <city>Seattle</city>
+            <state>WA</state>
+            <latitude>47.63903</latitude>
+            <longitude>-122.314594</longitude>
+          </address>
+          <useCode>Single Family</useCode>
+          <lotSizeSqFt>19946</lotSizeSqFt>
+          <finishedSqFt>7630</finishedSqFt>
+          <bathrooms>3.5</bathrooms>
+          <bedrooms>4</bedrooms>
+        </property>
+        <images>
+          <count>2</count>
+        </images>
+        <price>2500000</price>
+      </result>
+    </forRent>
   </response>
 </RegionPostings:regionPostings>
 <!-- H:117  T:63ms  S:42516  R:Fri Aug 26 12:48:06 PDT 2011  B:3.0.121144.20110823141116-comp_rel_b -->

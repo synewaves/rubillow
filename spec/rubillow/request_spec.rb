@@ -56,18 +56,10 @@ describe Rubillow::Request, ".request" do
     Rubillow::Request.request.open_timeout.should == Rubillow.configuration.http_open_timeout
     Rubillow::Request.request.read_timeout.should == Rubillow.configuration.http_read_timeout
   end
-  
-  it "sets proxy configuration options without authentication" do
-    pending "not sure if this is testable"
-  end
-  
-  it "sets proxy configuration options with authentication" do
-    pending "not sure if this is testable"
-  end
 end
 
 describe Rubillow::Request, ".uri" do
   it "generates a request path and query string based on parameters" do
-    Rubillow::Request.uri("GetRegionChart", { :key_with_spaces => 12, :normal => "maybe"}).should == "/webservice/GetRegionChart.htm?key-with-spaces=12&normal=maybe"
+    Rubillow::Request.uri("GetRegionChart", { :key_with_spaces => 12, :normal => "maybe", :camelCased => 1340}).should == "/webservice/GetRegionChart.htm?camelCased=1340&key-with-spaces=12&normal=maybe"
   end
 end

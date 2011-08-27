@@ -1,5 +1,15 @@
 module Rubillow
+  # Interface for the Mortgage API.
+  # 
+  # Read the more about this API at: {http://www.zillow.com/howto/api/MortgageAPIOverview.htm}
   class Mortgage
+    # Retrieve the current rates for today and one week ago for each loan type.
+    #
+    # Read more at: {http://www.zillow.com/howto/api/GetRateSummary.htm}.
+    # 
+    # @param [Hash] options The options for the API request.
+    # @option options [String] :state   The state to limit rates.
+    # @return [Models::RateSummary] Mortgage rate summary.
     def self.rate_summary(options = {})
       options = {
         :zws_id => Rubillow.configuration.zwsid,
@@ -10,6 +20,18 @@ module Rubillow
       Models::RateSummary.new(Rubillow::Request.get("GetRateSummary", options))
     end
     
+    # Retrieve the current monthly payment information for a given loan amount
+    #
+    # Read more at: {http://www.zillow.com/howto/api/GetMonthlyPayments.htm}.
+    # 
+    # \* Either the down or dollars down options are required.
+    #
+    # @param [Hash] options The options for the API request.
+    # @option options [Float] :price        The loan amount. (required)
+    # @option options [Float] :down         The percentage of the price as a down payment. Defaults to 20%. If less than 20%, private mortgage insurance is returned. (required *)
+    # @option options [Float] :dollarsdown  The dollar amount as down payment. Used if down option is omitted. If less than 20% of total price, private mortgage insurance is returned. (required *)
+    # @option options [String] :zip         The ZIP code for the property. If provided, property tax and hazard insurance will be returned.
+    # @return [Models::MonthlyPayments] Monthly mortage information.
     def self.monthly_payments(options = {})
       options = {
         :zws_id => Rubillow.configuration.zwsid,
