@@ -9,6 +9,17 @@ module Rubillow
     #
     # \* At least regionid or state/city, city/neighborhood, or zip options are required.
     # 
+    # @example
+    #   data = Rubillow::Neighborhood.demographics({ :state => 'WA', :city => 'Seattle', :neighborhood => 'Ballard' })
+    #   
+    #   if data.success?
+    #     puts data.charts['Median Condo Value']
+    #     puts data.affordability_data['Zillow Home Value Index'][:neighborhood]
+    #     data.characteristics.each do |stat|
+    #       stat
+    #     end
+    #   end
+    #
     # @param [Hash] options The options for the API request.
     # @option options [String] :regionid      The id of the region (required *)
     # @option options [String] :state         The state of the region (required *)
@@ -39,6 +50,17 @@ module Rubillow
     #
     # \* At least regionid or state options are required.
     # 
+    # @example
+    #   data = Rubillow::Neighborhood.region_children({ :state => 'WA', :city => 'Seattle', :childtype => 'neighborhood' })
+    #   
+    #   if data.success?
+    #     puts data.region.id        # "16037"
+    #     puts data.region.latitude  # "47.559364"
+    #     data.regions.each do |region|
+    #       puts region.id
+    #     end
+    #   end
+    #
     # @param [Hash] options The options for the API request.
     # @option options [String] :regionid   The id of the region (required *)
     # @option options [String] :state      The state of the region (required *)
@@ -67,6 +89,13 @@ module Rubillow
     #
     # Read more at: {http://www.zillow.com/howto/api/GetRegionChart.htm}.
     # 
+    # @example
+    #   chart = Rubillow::Neighborhood.chart({ :city => 'Seattle', :state => 'WA', :unit_type => 'percent', :width => 300, :height => 150 })
+    #   
+    #   if chart.success?
+    #     puts chart.to_html
+    #   end
+    #
     # @param [Hash] options The options for the API request.
     # @option options [String]  :city           The city of the region
     # @option options [String]  :state          The state of the region

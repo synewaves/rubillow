@@ -6,17 +6,47 @@ module Rubillow
       
       # @return [Models::Region] region data.
       attr_accessor :region
+      
       # @return [Hash] Charts (key: name, value: url).
+      #
+      # @example
+      #   charts.each do |name, value|
+      #   end
+      #
       attr_accessor :charts
+      
       # @return [Hash] Metrics ([high level point][low level point]).
+      # 
+      # @example
+      #   puts metrics['BuiltYear']['<1900']
+      #
       attr_accessor :metrics
+      
       # @return [Hash] Affordability metrics (key: name, value: value).
+      #
+      # @example
+      #   puts affordability_data['Zillow Home Value Index'][:neighborhood]
+      #
       attr_accessor :affordability_data
+      
       # @return [Hash] US Census metrics ([high level point][low level point]).
+      #
+      # @example
+      #   puts census_data['Household']['NoKids']
       attr_accessor :census_data
+      
       # @return [Hash] Segmentation metrics (key: name, value: [:name, :description])
+      #
+      # @example
+      #   puts segmentation["Makin' It Singles"][:name]
+      #   puts segmentation["Makin' It Singles"][:description]
+      # 
       attr_accessor :segmentation
+      
       # @return [Hash] Characteristics metrics ([high level point] -> hash)
+      #
+      # @example
+      #   characteristics['Education']
       attr_accessor :characteristics
       
       protected

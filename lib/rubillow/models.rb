@@ -9,12 +9,17 @@ module Rubillow
     class Base
       # @return [String] the raw XML content from the service
       attr_accessor :xml
+      
       # @private
+      # @return [Nokogiri::XML::Reader] xml parser
       attr_accessor :parser
+      
       # @return [String] response message
       attr_accessor :message
+      
       # @return [Integer] response code
       attr_accessor :code
+      
       # @return [Boolean] nearing API's daily request limit
       attr_accessor :near_limit
     
@@ -27,6 +32,9 @@ module Rubillow
           @xml = xml
           @parser = Nokogiri::XML(xml) { |cfg| cfg.noblanks }
           parse
+        else
+          @code = -1
+          @message = 'Error connecting to remote service.'
         end
       end
     

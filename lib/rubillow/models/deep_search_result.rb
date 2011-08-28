@@ -6,14 +6,19 @@ module Rubillow
       
       # @return [String] FIPS county code. See {http://www.itl.nist.gov/fipspubs/fip6-4.htm}.
       attr_accessor :fips_county
+      
       # @return [String] year of the last tax assessment
       attr_accessor :tax_assessment_year
+      
       # @return [String] value of the last tax assessment
       attr_accessor :tax_assessment
+      
       # @return [String] year home was built
       attr_accessor :year_built
+      
       # @return [Date] last date property was sold
       attr_accessor :last_sold_date
+      
       # @return [String] price property was last sold for
       attr_accessor :last_sold_price
       

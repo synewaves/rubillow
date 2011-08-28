@@ -4,7 +4,14 @@ module Rubillow
     class Comps < Base
       # @return [Models::SearchResult] principal property.
       attr_accessor :principal
+      
       # @return [Hash] comparables list (key => comparable's score, value => {Models::SearchResult}).
+      #
+      # @example
+      #  comparables.each do |score, comp|
+      #    puts score
+      #    puts comp.price
+      #  end
       attr_accessor :comparables
       
       protected

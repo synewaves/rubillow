@@ -14,11 +14,28 @@ describe Rubillow::Models::Base do
     data.near_limit.should be_true
   end
   
-  it "doesn't parse if empty XML" do
+  it "fails if empty XML" do
+    data = Rubillow::Models::Base.new("")
+    
+    data.success?.should be_false
+    data.code.should == -1
+    data.message.should == "Error connecting to remote service."
+  end
+  
+  it "fails if nil XML" do
     data = Rubillow::Models::Base.new(nil)
     
-    data.code.should be_nil
-    data.message.should be_nil
+    data.success?.should be_false
+    data.code.should == -1
+    data.message.should == "Error connecting to remote service."
+  end
+  
+  it "fails if passed false" do
+    data = Rubillow::Models::Base.new(false)
+    
+    data.success?.should be_false
+    data.code.should == -1
+    data.message.should == "Error connecting to remote service."
   end
   
   it "saves raw XML" do

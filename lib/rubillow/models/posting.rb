@@ -10,11 +10,13 @@ module Rubillow
       
       # @return [Date] last date data was refreshed.
       attr_accessor :last_refreshed_date
+      
       # @return [String] price
       attr_accessor :price
       
       protected
       
+      # @private
       def parse
         super
         

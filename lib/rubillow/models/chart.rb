@@ -4,8 +4,10 @@ module Rubillow
     class Chart < Base
       # @return [String] image height.
       attr_accessor :height
+      
       # @return [String] image width.
       attr_accessor :width
+      
       # @return [String] URL to image.
       attr_accessor :url
       

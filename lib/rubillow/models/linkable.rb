@@ -3,6 +3,11 @@ module Rubillow
     # Common data for responses containing links
     module Linkable
       # @return [Hash] Links (format: :name => 'url')
+      #
+      # @example
+      #   links.each do |name, url
+      #   end
+      # 
       attr_accessor :links
       
       protected

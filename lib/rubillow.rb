@@ -14,8 +14,7 @@ module Rubillow
   #
   # @example
   #   Rubillow.configure do |configuration|
-  #     configuration.http_open_timeout = 1
-  #     configuration.http_read_timeout = 1
+  #     configuration.zwsid = "abcd1234"
   #   end
   #
   # @yield [Configuration] The current configuration.

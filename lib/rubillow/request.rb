@@ -4,7 +4,13 @@ require 'uri'
 
 module Rubillow
   # @private
+  # HTTP request manager
   class Request
+    # Makes the request to the web service.
+    #
+    # @param [String] path     Web service name.
+    # @param [Hash]   options  Request options.
+    # @return [String, Boolean] XML on success, false if not.
     def self.get(path, options = {})
       zwsid = Rubillow.configuration.zwsid
 
@@ -22,6 +28,9 @@ module Rubillow
       end
     end
     
+    # gets the request object.
+    #
+    # @return [Net::HTTP] HTTP object.
     def self.request
       http = Net::HTTP.new(Rubillow.configuration.host, Rubillow.configuration.port)
       
@@ -30,11 +39,19 @@ module Rubillow
       http
     end
     
+    # Generate the url for the request.
+    # 
+    # @param [String] path     Web service name.
+    # @param [Hash]   options  Request options.
     def self.uri(path, options = {})
       path = Rubillow.configuration.path + path
       "/#{path}.htm?#{hash_to_query_string(options)}"
     end
 
+    # Turns request options into query string.
+    #
+    # @param [Hash] hash Request options.
+    # @return [String] Formatted query string.
     def self.hash_to_query_string(hash)
       hash = hash.sort_by { |key, value|
         key.to_s

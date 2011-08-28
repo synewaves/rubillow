@@ -17,6 +17,7 @@ describe Rubillow::Models::SearchResult do
     data.address[:zipcode].should == "98109"
     data.address[:latitude].should == "47.637933"
     data.address[:longitude].should == "-122.347938"
+    data.full_address.should == "2114 Bigelow Ave N, Seattle, WA 98109"
     data.price.should == "1032000"
     data.percentile.should == "0"
     data.last_updated.strftime("%m/%d/%Y").should == "08/24/2011"

@@ -19,7 +19,7 @@ describe Rubillow::PropertyDetails, ".deep_search_results" do
   it "fetches the XML" do
     Rubillow::Request.stubs(:request).returns(request)
     
-    response = Rubillow::PropertyDetails.deep_search_results({ :address => '100 North Blvd', :citystatezip => 'Baton Rouge, LA 70802' })
+    response = Rubillow::PropertyDetails.deep_search_results({ :address => '2114 Bigelow Ave', :citystatezip => 'Seattle, WA' })
     response.should be_an_instance_of(Rubillow::Models::DeepSearchResult)
   end  
 end

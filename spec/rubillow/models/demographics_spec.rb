@@ -37,6 +37,7 @@ describe Rubillow::Models::Demographics do
     
     data.metrics.count.should == 3
     data.metrics['BuiltYear']['<1900'].value.should == "0.0419354838709"
+    data.metrics['BuiltYear']['<1900'].to_s.should == "0.0419354838709"
     data.metrics['BuiltYear']['<1900'].type.should == "percent"
     data.metrics['BuiltYear']['1940-1959'].value.should == "0.0537634408602"
     data.metrics['BuiltYear']['1940-1959'].type.should == "percent"

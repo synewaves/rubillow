@@ -8,22 +8,39 @@ module Rubillow
       
       # @return [String] price
       attr_accessor :price
+      
       # @return [Date] last updated date
       attr_accessor :last_updated
+      
       # @return [Hash] valuation range (values: Strings, keys: :low, :high)
+      #
+      # @example
+      #   puts valuation_range[:low]
+      #
       attr_accessor :valuation_range
+      
       # @return [String] change value
       attr_accessor :change
+      
       # @return [String] duration of change value
       attr_accessor :change_duration
+      
       # @return [String] percentile
       attr_accessor :percentile
+      
       # @return [Hash] local real estate links (values: URL strings, keys: :overview, :for_sale_by_owner, :for_sale)
+      #
+      # @example
+      #    puts local_real_estate[:overview]
+      #
       attr_accessor :local_real_estate
+      
       # @return [String] region name
       attr_accessor :region
+      
       # @return [String] region id
       attr_accessor :region_id
+      
       # @return [String] region type
       attr_accessor :region_type
       

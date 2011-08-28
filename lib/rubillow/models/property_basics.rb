@@ -4,14 +4,19 @@ module Rubillow
     module PropertyBasics
       # @return [String] property type
       attr_accessor :use_code
+      
       # @return [String] Size of lot in square feet
       attr_accessor :lot_size_square_feet
+      
       # @return [String] Size of property in square feet
       attr_accessor :finished_square_feet
+      
       # @return [String] number of bathrooms
       attr_accessor :bathrooms
+      
       # @return [String] number of bedrooms
       attr_accessor :bedrooms
+      
       # @return [String] total number of rooms
       attr_accessor :total_rooms
       

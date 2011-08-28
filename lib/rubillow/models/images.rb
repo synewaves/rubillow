@@ -4,6 +4,7 @@ module Rubillow
     module Images
       # @return [Array] List of image urls
       attr_accessor :images
+      
       # @return [Integer] number of images available (doesn't always match @images.count)
       attr_accessor :images_count
       

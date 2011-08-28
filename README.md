@@ -1,6 +1,6 @@
 # Rubillow
 
-A ruby library to access the [Zillow API](http://www.zillow.com/howto/api/APIOverview.htm).
+Rubillow is a ruby library to access the [Zillow API](http://www.zillow.com/howto/api/APIOverview.htm).
 
 Supports all of the API methods, with real ruby classes returned for each call.
 
@@ -27,7 +27,37 @@ Supports all of the API methods, with real ruby classes returned for each call.
 ### [Postings API](http://www.zillow.com/howto/api/GetRegionPostings.htm)
 * [GetRegionPostings](http://www.zillow.com/howto/api/GetRegionPostings.htm)
 
-# 
+# Installing
+
+    gem install rubillow
+
+or add the following to your Gemfile:
+
+    gem "rubillow"
+
+# Examples
+
+Adding setup into an initializer:
+
+    Rubillow.configure do |configuration|
+      configuration.zwsid = "abcd1234"
+    end
+
+Getting property Zestimate:
+
+    property = Rubillow::HomeValuation.zestimate({ :zpid => '48749425' })
+    if property.success?
+      puts property.price
+    end
+
+# Documentation
+
+You should find the documentation for your version of Rubillow on [Rubygems](http://rubygems.org/gems/rubillow).
+
+# More Information
+
+* [Rubygems](http://rubygems.org/gems/rubillow)
+* [Issues](http://github.com/synewaves/rubillow/issues)
 
 # License
 

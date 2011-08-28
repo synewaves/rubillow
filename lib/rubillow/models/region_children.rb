@@ -4,6 +4,7 @@ module Rubillow
     class RegionChildren < Base
       # @return [Models::Region] top-level region
       attr_accessor :region
+      
       # @return [Array] sub-level regions ({Models::Region})
       attr_accessor :regions
       

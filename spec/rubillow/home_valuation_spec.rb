@@ -6,20 +6,20 @@ describe Rubillow::HomeValuation, ".search_results" do
   
   it "requires the address option" do
     lambda {
-      Rubillow::HomeValuation.search_results({ :citystatezip => 'Baton Rouge, LA, 70802' })
+      Rubillow::HomeValuation.search_results({ :citystatezip => 'Seattle, WA' })
     }.should raise_error(ArgumentError, "The address option is required")
   end
   
   it "requires the citystatezip option" do
     lambda {
-      Rubillow::HomeValuation.search_results({ :address => '100 North Blvd' })
+      Rubillow::HomeValuation.search_results({ :address => '2114 Bigelow Ave' })
     }.should raise_error(ArgumentError, "The citystatezip option is required")
   end
   
   it "fetches the XML" do
     Rubillow::Request.stubs(:request).returns(request)
     
-    response = Rubillow::HomeValuation.search_results({ :address => '100 North Blvd', :citystatezip => 'Baton Rouge, LA 70802' })
+    response = Rubillow::HomeValuation.search_results({ :address => '2114 Bigelow Ave', :citystatezip => 'Seattle, WA' })
     response.should be_an_instance_of(Rubillow::Models::SearchResult)
   end  
 end

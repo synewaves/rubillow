@@ -9,10 +9,21 @@ module Rubillow
     #
     # \* Either the zipcode or citystatezip option is required.
     #
+    # @example
+    #   data = Rubillow::Postings.region_postings({ :zipcode => "98102", :rental => true })
+    #   
+    #   if data.success?
+    #     puts data.region_id  # "99562"
+    #     data.make_me_move.each do |posting|
+    #       puts posting.price
+    #       puts posting.address[:street]
+    #     end
+    #   end
+    #
     # @param [Hash] options The options for the API request.
-    # @option options [String]  :zipcode       The zipcode of the region (required *)
-    # @option options [String]  :citystatezip  The city+state combination and/or ZIP code in which to search. Note that giving both city and state is required. Using just one will not work. (required *)
-    # @option options [Boolean] :rental        Return rental properties (defaults to +false+)
+    # @option options [String]  :zipcode       The zipcode of the region (required *).
+    # @option options [String]  :citystatezip  The city+state combination and/or ZIP code in which to search. Note that giving both city and state is required. Using just one will not work. (required *).
+    # @option options [Boolean] :rental        Return rental properties (defaults to +false+).
     # @option options [String]  :postingType   The type of for sale listings to return. The default is +all+. To return only for sale by owner, set +fsbo+. To return only for sale by agent, set +fsba+. To return only Make Me Move, set +mmm+. Set +none+ and the rental parameter to +true+ to return only rentals.
     # @return [Models::Postings] Region postings list.
     def self.region_postings(options = {})

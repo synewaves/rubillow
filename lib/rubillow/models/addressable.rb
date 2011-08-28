@@ -3,7 +3,19 @@ module Rubillow
     # Common data for responses containing address information.
     module Addressable
       # @return [Hash] Address information (all are strings, keys are: :street, :city, :state, :zipcode, :latitude, :longitude).
+      #
+      # @example
+      #   puts address[:street]
+      #   puts address[:city]
+      #
       attr_accessor :address
+      
+      # get the full, formatted address
+      # 
+      # @return [String] formatted address
+      def full_address
+        @address[:street] + ', ' + @address[:city] + ', ' + @address[:state] + ' ' + @address[:zipcode]
+      end
       
       protected
       

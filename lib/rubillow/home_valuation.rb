@@ -7,6 +7,14 @@ module Rubillow
     #
     # Read more at: {http://www.zillow.com/howto/api/GetSearchResults.htm}.
     # 
+    # @example
+    #   data = Rubillow::HomeValuation.search_results({ :address => '2114 Bigelow Ave', :citystatezip => 'Seattle, WA' })
+    #   
+    #   if data.success?
+    #     puts data.zpid    # "48749425" 
+    #     puts data.price   # "1032000"
+    #   end
+    #
     # @param [Hash] options The options for the API request.
     # @option options [String] :address       The address of the property to search. (required)
     # @option options [String] :citystatezip  The city+state combination and/or ZIP code for which to search. Note that giving both city and state is required. Using just one will not work. (required)
@@ -32,6 +40,15 @@ module Rubillow
     #
     # Read more at: {http://www.zillow.com/howto/api/GetZestimate.htm}.
     # 
+    # @example
+    #   data = Rubillow::HomeValuation.zestimate({ :zpid => '48749425' })
+    #   
+    #   if data.success?
+    #     puts data.zpid          # "48749425" 
+    #     puts data.price         # "1032000"
+    #     puts data.value_change  # "5900"
+    #   end
+    #
     # @param [Hash] options The options for the API request.
     # @option options [Integer] :zpid   The Zillow Property ID of the property. (required)
     # @return [Models::SearchResult] Property pricing information.
@@ -52,6 +69,13 @@ module Rubillow
     #
     # Read more at: {http://www.zillow.com/howto/api/GetChart.htm}.
     # 
+    # @example
+    #   chart = Rubillow::HomeValuation.chart({ :zpid => '48749425', :height => '300', :width => '150' })
+    #   
+    #   if chart.success?
+    #     puts chart.to_html
+    #   end
+    #
     # @param [Hash] options The options for the API request.
     # @option options [Integer] :zpid           The Zillow Property ID of the property. (required)
     # @option options [String]  :unit-type      Show the percent change ("percent"), or dollar change ("dollar"). (required)
@@ -83,6 +107,16 @@ module Rubillow
     #
     # Read more at: {http://www.zillow.com/howto/api/GetComps.htm}.
     # 
+    # @example
+    #   data = Rubillow::HomeValuation.comps({ :zpid => '48749425', :count => 5 })
+    #   
+    #   if data.success?
+    #     puts data.principal.price  # "1032000"
+    #     data.comparables.each do |comp|
+    #       puts comparables.price
+    #     end
+    #   end
+    #
     # @param [Hash] options The options for the API request.
     # @option options [Integer] :zpid   The Zillow Property ID of the property. (required)
     # @option options [Integer] :count  The number of comps to return, between 1 and 25 inclusive. (required)

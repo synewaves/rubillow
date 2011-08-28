@@ -7,6 +7,15 @@ module Rubillow
     #
     # Read more at: {http://www.zillow.com/howto/api/GetDeepSearchResults.htm}.
     #
+    # @example
+    #   data = Rubillow::PropertyDetails.deep_search_results({ :address => '2114 Bigelow Ave', :citystatezip => 'Seattle, WA' })
+    #   
+    #   if data.success?
+    #     puts data.tax_assessment_year  # "2010"
+    #     puts data.last_sold_price      # "1025000"
+    #     puts data.address[:latitude]   # "47.637933"
+    #   end
+    #
     # @param [Hash] options The options for the API request.
     # @option options [String] :address       The address of the property to search. (required)
     # @option options [String] :citystatezip  The city+state combination and/or ZIP code for which to search. Note that giving both city and state is required. Using just one will not work. (required)
@@ -32,6 +41,17 @@ module Rubillow
     #
     # Read more at: {http://www.zillow.com/howto/api/GetDeepComps.htm}.
     #
+    # @example
+    #   data = Rubillow::PropertyDetails.deep_comps({ :zpid => '48749425', :count => 5 })
+    #   
+    #   if data.success?
+    #     puts data.principal.price  # "1032000"
+    #     data.comparables.each |comp|
+    #       puts comp.price
+    #       puts comp.address[:street]
+    #     end
+    #   end
+    #
     # @param [Hash] options The options for the API request.
     # @option options [Integer] :zpid   The Zillow Property ID of the property. (required)
     # @option options [Integer] :count  The number of comps to return, between 1 and 25 inclusive. (required)
@@ -56,6 +76,17 @@ module Rubillow
     # Retrieve updated property facts for a given property.
     #
     # Read more at: {http://www.zillow.com/howto/api/GetUpdatedPropertyDetails.htm}.
+    #
+    # @example
+    #   data = Rubillow::PropertyDetails.updated_property_details({ :zpid => '48749425' })
+    #   
+    #   if data.success?
+    #     puts data.posting[:status]  # "1032000"
+    #     puts data.posting[:type]    # "For sale by agent"
+    #     data.edited_facts.each |fact|
+    #       puts fact
+    #     end
+    #   end
     #
     # @param [Hash] options The options for the API request.
     # @option options [Integer] :zpid   The Zillow Property ID of the property. (required)
