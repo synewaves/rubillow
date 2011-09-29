@@ -74,13 +74,23 @@ module Rubillow
         
         @posting = {}
         @parser.xpath('//posting').children.each do |elm|
-          @posting[elm.name.underscore.to_sym] = elm.text
+          @posting[underscore(elm.name).to_sym] = elm.text
         end
         
         @edited_facts = {}
         @parser.xpath('//editedFacts').children.each do |elm|
-          @edited_facts[elm.name.underscore.to_sym] = elm.text
+          @edited_facts[underscore(elm.name).to_sym] = elm.text
         end
+      end
+      
+      def underscore(string)
+        word = string.to_s.dup
+        word.gsub!(/::/, '/')
+        word.gsub!(/([A-Z]+)([A-Z][a-z])/,'\1_\2')
+        word.gsub!(/([a-z\d])([A-Z])/,'\1_\2')
+        word.gsub!(/\-/, '_')
+        word.downcase!
+        word
       end
     end
   end

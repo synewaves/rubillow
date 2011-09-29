@@ -1,6 +1,4 @@
 require "nokogiri"
-require "active_support/core_ext/string"
-require "active_support/inflector"
 
 module Rubillow
   # Sub module for returned and parsed web service data
@@ -28,7 +26,7 @@ module Rubillow
       #
       # @param [String] xml the raw XML from the service
       def initialize(xml)
-        if !xml.blank?
+        if !empty?(xml)
           @xml = xml
           @parser = Nokogiri::XML(xml) { |cfg| cfg.noblanks }
           parse
@@ -54,6 +52,10 @@ module Rubillow
         
         limit = @parser.xpath('//message/limit-warning')
         @near_limit = !limit.empty? && limit.text.downcase == "true"
+      end
+      
+      def empty?(elm)
+        elm.respond_to?(:empty?) ? elm.empty? : !elm
       end
     end
   end

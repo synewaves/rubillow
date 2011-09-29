@@ -2,19 +2,15 @@ PATH
   remote: .
   specs:
     rubillow (0.0.1)
-      activesupport (~> 3.0.10)
-      i18n (~> 0.6.0)
       nokogiri (~> 1.5.0)
 
 GEM
   remote: http://rubygems.org/
   specs:
-    activesupport (3.0.10)
     bluecloth (2.1.0)
     bourne (1.0)
       mocha (= 0.9.8)
     diff-lcs (1.1.2)
-    i18n (0.6.0)
     mocha (0.9.8)
       rake
     nokogiri (1.5.0)
