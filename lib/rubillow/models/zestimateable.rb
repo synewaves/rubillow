@@ -58,19 +58,22 @@ module Rubillow
           :low  => xml.xpath('//zestimate/valuationRange/low').text,
           :high => xml.xpath('//zestimate/valuationRange/high').text,
         }
-        @change = xml.xpath('//zestimate/valueChange').text
-        @change_duration = xml.xpath('//zestimate/valueChange').attr('duration').value
-        @percentile = xml.xpath('//zestimate/percentile').text
+        begin
+          @change = xml.xpath('//zestimate/valueChange').text
+          @change_duration = xml.xpath('//zestimate/valueChange').attr('duration').value
+          @percentile = xml.xpath('//zestimate/percentile').text
         
-        @region = xml.xpath('//localRealEstate/region').attribute('name').value
-        @region_id = xml.xpath('//localRealEstate/region').attribute('id').value
-        @region_type = xml.xpath('//localRealEstate/region').attribute('type').value
+          @region = xml.xpath('//localRealEstate/region').attribute('name').value
+          @region_id = xml.xpath('//localRealEstate/region').attribute('id').value
+          @region_type = xml.xpath('//localRealEstate/region').attribute('type').value
       
-        @local_real_estate = {
-          :overview => xml.xpath('//localRealEstate/region/links/overview').text,
-          :for_sale_by_owner => xml.xpath('//localRealEstate/region/links/forSaleByOwner').text,
-          :for_sale => xml.xpath('//localRealEstate/region/links/forSale').text,
-        }
+          @local_real_estate = {
+            :overview => xml.xpath('//localRealEstate/region/links/overview').text,
+            :for_sale_by_owner => xml.xpath('//localRealEstate/region/links/forSaleByOwner').text,
+            :for_sale => xml.xpath('//localRealEstate/region/links/forSale').text,
+          }
+        rescue
+        end
       end
     end
   end
