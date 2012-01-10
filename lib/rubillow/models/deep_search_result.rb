@@ -36,11 +36,7 @@ module Rubillow
         @tax_assessment_year = @parser.xpath('//taxAssessmentYear').text
         @tax_assessment = @parser.xpath('//taxAssessment').text
         @year_built = @parser.xpath('//yearBuilt').text
-        # Hack to get it not to crash everything
-        begin
-          @last_sold_date = Date.strptime(@parser.xpath('//lastSoldDate').text, "%m/%d/%Y")
-        rescue
-        end
+        @last_sold_date = Date.strptime(@parser.xpath('//lastSoldDate').text, "%m/%d/%Y")
         @last_sold_price = @parser.xpath('//lastSoldPrice').text
       end
     end
