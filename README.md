@@ -59,6 +59,11 @@ You should find the documentation for your version of Rubillow on [Rubygems](htt
 * [Rubygems](http://rubygems.org/gems/rubillow)
 * [Issues](http://github.com/synewaves/rubillow/issues)
 
+# Build & Dependency Status
+
+[![Build Status](http://travis-ci.org/synewaves/rubillow.png)](http://travis-ci.org/synewaves/rubillow)
+[![Dependency Status](https://gemnasium.com/synewaves/rubillow.png?travis)](https://gemnasium.com/synewaves/rubillow)
+
 # License
 
 Rubillow uses the MIT license. See LICENSE for more details.
