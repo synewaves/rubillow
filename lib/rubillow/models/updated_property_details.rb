@@ -83,6 +83,7 @@ module Rubillow
         end
       end
       
+      # @private
       def underscore(string)
         word = string.to_s.dup
         word.gsub!(/::/, '/')
