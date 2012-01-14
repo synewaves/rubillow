@@ -8,6 +8,8 @@ require "rubillow/property_details"
 require "rubillow/neighborhood"
 require "rubillow/models"
 
+require 'date'
+
 # Top-level interface to Rubillow
 module Rubillow
   # Call this method to modify defaults in your initializers.

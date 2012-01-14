@@ -101,7 +101,7 @@ module Rubillow
         raise ArgumentError, "The zpid option is required"
       end
     
-      Models::UpdatedPropertyDetails.new(Rubillow::Request.get("GetUpdatePropertyDetails", options))
+      Models::UpdatedPropertyDetails.new(Rubillow::Request.get("GetUpdatedPropertyDetails", options))
     end
   end
 end
