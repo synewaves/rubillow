@@ -11,7 +11,7 @@ describe Rubillow::Neighborhood, ".demographics" do
   end
   
   it "fetches the XML" do
-    Rubillow::Request.stubs(:request).returns(request)
+    Rubillow::Request.stub(:request).and_return(request)
     
     response = Rubillow::Neighborhood.demographics({ :state => 'WA', :city => 'Seattle', :neighborhood => 'Ballard' })
     response.should be_an_instance_of(Rubillow::Models::Demographics)
@@ -29,7 +29,7 @@ describe Rubillow::Neighborhood, ".region_children" do
   end
   
   it "fetches the XML" do
-    Rubillow::Request.stubs(:request).returns(request)
+    Rubillow::Request.stub(:request).and_return(request)
     
     response = Rubillow::Neighborhood.region_children({ :state => 'WA', :city => 'Seattle', :childtype => 'neighborhood' })
     response.should be_an_instance_of(Rubillow::Models::RegionChildren)
@@ -47,7 +47,7 @@ describe Rubillow::Neighborhood, ".region_chart" do
   end
   
   it "fetches the XML" do
-    Rubillow::Request.stubs(:request).returns(request)
+    Rubillow::Request.stub(:request).and_return(request)
     
     response = Rubillow::Neighborhood.region_chart({ :city => 'Seattle', :state => 'WA', :unit_type => 'percent', :width => 300, :height => 150 })
     response.should be_an_instance_of(Rubillow::Models::RegionChart)

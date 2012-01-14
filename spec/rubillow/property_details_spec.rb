@@ -17,7 +17,7 @@ describe Rubillow::PropertyDetails, ".deep_search_results" do
   end
   
   it "fetches the XML" do
-    Rubillow::Request.stubs(:request).returns(request)
+    Rubillow::Request.stub(:request).and_return(request)
     
     response = Rubillow::PropertyDetails.deep_search_results({ :address => '2114 Bigelow Ave', :citystatezip => 'Seattle, WA' })
     response.should be_an_instance_of(Rubillow::Models::DeepSearchResult)
@@ -41,7 +41,7 @@ describe Rubillow::PropertyDetails, ".deep_comps" do
   end
   
   it "fetches the XML" do
-    Rubillow::Request.stubs(:request).returns(request)
+    Rubillow::Request.stub(:request).and_return(request)
     
     response = Rubillow::PropertyDetails.deep_comps({ :zpid => '48749425', :count => 5 })
     response.should be_an_instance_of(Rubillow::Models::DeepComps)
@@ -59,7 +59,7 @@ describe Rubillow::PropertyDetails, ".updated_property_details" do
   end
   
   it "fetches the XML" do
-    Rubillow::Request.stubs(:request).returns(request)
+    Rubillow::Request.stub(:request).and_return(request)
     
     response = Rubillow::PropertyDetails.updated_property_details({ :zpid => '48749425' })
     response.should be_an_instance_of(Rubillow::Models::UpdatedPropertyDetails)

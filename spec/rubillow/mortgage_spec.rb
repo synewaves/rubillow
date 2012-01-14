@@ -5,7 +5,7 @@ describe Rubillow::Mortgage, ".rate_summary" do
   let(:response) { stub("Response", :body => "", :code => 200) }
   
   it "fetches the XML" do
-    Rubillow::Request.stubs(:request).returns(request)
+    Rubillow::Request.stub(:request).and_return(request)
     
     response = Rubillow::Mortgage.rate_summary()
     response.should be_an_instance_of(Rubillow::Models::RateSummary)
@@ -29,7 +29,7 @@ describe Rubillow::Mortgage, ".monthly_payments" do
   end
   
   it "fetches the XML" do
-    Rubillow::Request.stubs(:request).returns(request)
+    Rubillow::Request.stub(:request).and_return(request)
     
     response = Rubillow::Mortgage.monthly_payments({ :price => "300000", :down => "15", :zip => "98104" })
     response.should be_an_instance_of(Rubillow::Models::MonthlyPayments)

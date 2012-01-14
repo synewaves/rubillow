@@ -6,30 +6,33 @@ describe Rubillow::Request, ".get" do
   let(:zwsid)    { "xyz123-oo" }
 
   before do
-    Rubillow::Request.stubs(:uri).returns("/")
-    Rubillow::Request.stubs(:request).returns(request)
+    Rubillow::Request.stub(:uri).and_return("/")
+    Rubillow::Request.stub(:request).and_return(request)
   end
 
   it "constructs the request URI" do
+    Rubillow::Request.should_receive(:uri).with("/", :option => 1)
     Rubillow::Request.get("/", :option => 1)
-    Rubillow::Request.should have_received(:uri).with("/", :option => 1)
   end
 
   it "includes access key when configured" do
+    Rubillow::Request.should_receive(:uri).with("/", :zws_id => zwsid)
+
     Rubillow.configuration.zwsid = zwsid
     Rubillow::Request.get("/")
-    Rubillow::Request.should have_received(:uri).with("/", :zws_id => zwsid)
   end
 
   it "allows overriding of configured access key" do
+    Rubillow::Request.should_receive(:uri).with("/", :zws_id => "abc890_11")
+
     Rubillow.configuration.zwsid = zwsid
     Rubillow::Request.get("/", :zws_id => "abc890_11")
-    Rubillow::Request.should have_received(:uri).with("/", :zws_id => "abc890_11")
   end
 
   it "makes an API request" do
+    request.should_receive(:get).with("/")
+
     Rubillow::Request.get("/")
-    request.should have_received(:get).with("/")
   end
 
   it "returns the XML for a successful response" do
@@ -37,7 +40,7 @@ describe Rubillow::Request, ".get" do
   end
 
   it "returns false for any response code other than 200" do
-    response.stubs(:code => "401")
+    response.stub(:code => "401")
     Rubillow::Request.get("/").should == false
   end
 end

@@ -11,7 +11,7 @@ describe Rubillow::Postings, ".region_postings" do
   end
   
   it "fetches the XML" do
-    Rubillow::Request.stubs(:request).returns(request)
+    Rubillow::Request.stub(:request).and_return(request)
     
     response = Rubillow::Postings.region_postings({ :zipcode => "98102", :rental => true })
     response.should be_an_instance_of(Rubillow::Models::Postings)

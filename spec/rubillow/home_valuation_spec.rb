@@ -17,7 +17,7 @@ describe Rubillow::HomeValuation, ".search_results" do
   end
   
   it "fetches the XML" do
-    Rubillow::Request.stubs(:request).returns(request)
+    Rubillow::Request.stub(:request).and_return(request)
     
     response = Rubillow::HomeValuation.search_results({ :address => '2114 Bigelow Ave', :citystatezip => 'Seattle, WA' })
     response.should be_an_instance_of(Rubillow::Models::SearchResult)
@@ -35,7 +35,7 @@ describe Rubillow::HomeValuation, ".zestimate" do
   end
   
   it "fetches the XML" do
-    Rubillow::Request.stubs(:request).returns(request)
+    Rubillow::Request.stub(:request).and_return(request)
     
     response = Rubillow::HomeValuation.zestimate({ :zpid => '48749425' })
     response.should be_an_instance_of(Rubillow::Models::SearchResult)
@@ -59,7 +59,7 @@ describe Rubillow::HomeValuation, ".chart" do
   end
   
   it "fetches the XML" do
-    Rubillow::Request.stubs(:request).returns(request)
+    Rubillow::Request.stub(:request).and_return(request)
     
     response = Rubillow::HomeValuation.chart({ :zpid => '48749425', :unit_type => "percent" })
     response.should be_an_instance_of(Rubillow::Models::PropertyChart)
@@ -83,7 +83,7 @@ describe Rubillow::HomeValuation, ".comps" do
   end
   
   it "fetches the XML" do
-    Rubillow::Request.stubs(:request).returns(request)
+    Rubillow::Request.stub(:request).and_return(request)
     
     response = Rubillow::HomeValuation.comps({ :zpid => '48749425', :count => 5 })
     response.should be_an_instance_of(Rubillow::Models::Comps)
