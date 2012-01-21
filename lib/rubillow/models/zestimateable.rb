@@ -59,7 +59,9 @@ module Rubillow
           :high => xml.xpath('//zestimate/valuationRange/high').text,
         }
         @change = xml.xpath('//zestimate/valueChange').text
-        @change_duration = xml.xpath('//zestimate/valueChange').attr('duration').value
+        if tmp = xml.xpath('//zestimate/valueChange').attr('duration')
+          @change_duration = tmp.value
+        end
         @percentile = xml.xpath('//zestimate/percentile').text
         
         @region = xml.xpath('//localRealEstate/region').attribute('name').value
