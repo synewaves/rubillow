@@ -36,7 +36,9 @@ module Rubillow
         @tax_assessment_year = @parser.xpath('//taxAssessmentYear').text
         @tax_assessment = @parser.xpath('//taxAssessment').text
         @year_built = @parser.xpath('//yearBuilt').text
-        @last_sold_date = Date.strptime(@parser.xpath('//lastSoldDate').text, "%m/%d/%Y")
+        if tmp = @parser.xpath('//lastSoldDate').text and tmp.strip.length > 0
+          @last_sold_date = Date.strptime(tmp, "%m/%d/%Y")
+        end
         @last_sold_price = @parser.xpath('//lastSoldPrice').text
       end
     end
