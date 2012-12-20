@@ -36,6 +36,16 @@
       </valuationRange>
       <percentile>95</percentile>
     </zestimate>
+    <rentzestimate>
+      <amount currency="USD">3379</amount>
+      <last-updated>12/17/2012</last-updated>
+      <oneWeekChange deprecated="true"></oneWeekChange>
+      <valueChange duration="30" currency="USD">107</valueChange>
+      <valuationRange>
+        <low currency="USD">2154</low>
+        <high currency="USD">5102</high>
+      </valuationRange>
+    </rentzestimate>
     <localRealEstate>
       <region id="271856" type="neighborhood" name="East Queen Anne">
         <links>
