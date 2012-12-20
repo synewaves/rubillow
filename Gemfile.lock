@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rubillow (0.0.4)
+    rubillow (0.0.3)
       nokogiri (~> 1.5.0)
 
 GEM
@@ -9,7 +9,7 @@ GEM
   specs:
     bluecloth (2.1.0)
     diff-lcs (1.1.2)
-    nokogiri (1.5.6)
+    nokogiri (1.5.0)
     rake (0.9.2)
     rcov (0.9.10)
     rspec (2.6.0)
