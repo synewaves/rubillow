@@ -43,6 +43,9 @@ module Rubillow
       
       # @return [String] region type
       attr_accessor :region_type
+
+      # @return [Hash] Rent Zestimate information (keys: :price, :last_updated, :value_change, :value_duration, :valuation_range => { :low, :high }, :percentile)
+      attr_accessor :rent_zestimate
       
       protected
       
@@ -59,6 +62,23 @@ module Rubillow
           :high => xml.xpath('//zestimate/valuationRange/high').text,
         }
         @change = xml.xpath('//zestimate/valueChange').text
+
+        if xml.xpath('//rentzestimate/amount').text.length > 0
+          @rent_zestimate = {
+            :price => xml.xpath('//rentzestimate/amount').text,
+            :last_updated => xml.xpath('//rentzestimate/last-updated').text,
+            :value_change => xml.xpath('//rentzestimate/valueChange').text,
+            :value_duration => xml.xpath('//rentzestimate/valueChange').attr('duration').value,
+            :valuation_range => {
+              :low => xml.xpath('//rentzestimate/valuationRange/low').text,
+              :high => xml.xpath('//rentzestimate/valuationRange/high').text
+            },
+            :percentile => xml.xpath('//rentzestimate/percentile').text
+          }
+        else
+          @rent_zestimate = {}
+        end
+
         if tmp = xml.xpath('//zestimate/valueChange').attr('duration')
           @change_duration = tmp.value
         end

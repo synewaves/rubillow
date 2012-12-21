@@ -64,5 +64,11 @@ describe Rubillow::Models::SearchResult do
     data.region.should == "East Queen Anne"
     data.region_type.should == "neighborhood"
     data.region_id.should == "271856"
+    data.rent_zestimate[:price].should == "3379"
+    data.rent_zestimate[:last_updated].should == "12/17/2012"
+    data.rent_zestimate[:value_change].should == "107"
+    data.rent_zestimate[:value_duration].should == "30"
+    data.rent_zestimate[:valuation_range][:low].should == "2154"
+    data.rent_zestimate[:valuation_range][:high].should == "5102"
   end
 end
