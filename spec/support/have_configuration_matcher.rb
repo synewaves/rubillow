@@ -14,8 +14,15 @@ RSpec::Matchers.define :have_configuration_option do |option|
     @default = default
   end
 
-  failure_message do
+  failure_message_for_should do
     description  = "expected #{subject} to have"
+    description << " configuration option #{option.inspect}"
+    description << " with a default of #{@default.inspect}" if instance_variables.include?("@default")
+    description
+  end
+  
+  failure_message_for_should_not do
+    description  = "expected #{subject} to not have"
     description << " configuration option #{option.inspect}"
     description << " with a default of #{@default.inspect}" if instance_variables.include?("@default")
     description
