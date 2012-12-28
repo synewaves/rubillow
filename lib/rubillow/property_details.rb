@@ -17,14 +17,16 @@ module Rubillow
     #   end
     #
     # @param [Hash] options The options for the API request.
-    # @option options [String] :address       The address of the property to search. (required)
-    # @option options [String] :citystatezip  The city+state combination and/or ZIP code for which to search. Note that giving both city and state is required. Using just one will not work. (required)
+    # @option options [String]  :address        The address of the property to search. (required)
+    # @option options [String]  :citystatezip   The city+state combination and/or ZIP code for which to search. Note that giving both city and state is required. Using just one will not work. (required)
+    # @option options [Boolean] :rentzestimate  Return Rent Zestimate information if available. Default: false
     # @return [Models::DeepSearchResult] Extended property details.
     def self.deep_search_results(options = {})
       options = {
         :zws_id => Rubillow.configuration.zwsid,
         :address => nil,
         :citystatezip => nil,
+        :rentzestimate => false,
       }.merge!(options)
     
       if options[:address].nil?
@@ -53,14 +55,16 @@ module Rubillow
     #   end
     #
     # @param [Hash] options The options for the API request.
-    # @option options [Integer] :zpid   The Zillow Property ID of the property. (required)
-    # @option options [Integer] :count  The number of comps to return, between 1 and 25 inclusive. (required)
+    # @option options [Integer] :zpid           The Zillow Property ID of the property. (required)
+    # @option options [Integer] :count          The number of comps to return, between 1 and 25 inclusive. (required)
+    # @option options [Boolean] :rentzestimate  Return Rent Zestimate information if available. Default: false
     # @return [Models::DeepComps] Extended property and comp details.
     def self.deep_comps(options = {})
       options = {
         :zws_id => Rubillow.configuration.zwsid,
         :zpid => nil,
         :count => nil,
+        :rentzestimate => false,
       }.merge!(options)
     
       if options[:zpid].nil?
