@@ -71,4 +71,30 @@ describe Rubillow::Models::SearchResult do
     data.rent_zestimate[:valuation_range][:low].should == "2154"
     data.rent_zestimate[:valuation_range][:high].should == "5102"
   end
+
+  it "populates the results from GetZestimate with missing region data" do
+    data = Rubillow::Models::SearchResult.new(get_xml('get_zestimate_missing_region.xml'))
+
+    data.zpid.should == '78264249'
+    data.links.count.should == 4
+    data.links[:homedetails].should == "http://www.zillow.com/homedetails/8663-Orchard-Loop-Rd-NE-Leland-NC-28451/78264249_zpid/"
+    data.links[:graphsanddata].should == "http://www.zillow.com/homedetails/8663-Orchard-Loop-Rd-NE-Leland-NC-28451/78264249_zpid/#charts-and-data"
+    data.links[:mapthishome].should == "http://www.zillow.com/homes/78264249_zpid/"
+    data.links[:comparables].should == "http://www.zillow.com/homes/comps/78264249_zpid/"
+    data.address[:street].should == "8663 Orchard Loop Rd NE"
+    data.address[:city].should == "Leland"
+    data.address[:state].should == "NC"
+    data.address[:zipcode].should == "28451"
+    data.address[:latitude].should == "34.217408"
+    data.address[:longitude].should == "-78.054412"
+    data.price.should == "136518"
+    data.percentile.should == "58"
+    data.last_updated.strftime("%m/%d/%Y").should == "12/27/2012"
+    data.valuation_range[:low].should == "23208"
+    data.valuation_range[:high].should == "203412"
+    data.change.should == "-1299"
+    data.change_duration.should == "30"
+    data.local_real_estate.should == nil
+    data.region.should == nil
+  end
 end

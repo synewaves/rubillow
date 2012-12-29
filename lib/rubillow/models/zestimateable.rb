@@ -83,16 +83,18 @@ module Rubillow
           @change_duration = tmp.value
         end
         @percentile = xml.xpath('//zestimate/percentile').text
-        
-        @region = xml.xpath('//localRealEstate/region').attribute('name').value
-        @region_id = xml.xpath('//localRealEstate/region').attribute('id').value
-        @region_type = xml.xpath('//localRealEstate/region').attribute('type').value
-      
-        @local_real_estate = {
-          :overview => xml.xpath('//localRealEstate/region/links/overview').text,
-          :for_sale_by_owner => xml.xpath('//localRealEstate/region/links/forSaleByOwner').text,
-          :for_sale => xml.xpath('//localRealEstate/region/links/forSale').text,
-        }
+
+        if xml.at_xpath('//localRealEstate/region')
+          @region = xml.xpath('//localRealEstate/region').attribute('name').value
+          @region_id = xml.xpath('//localRealEstate/region').attribute('id').value
+          @region_type = xml.xpath('//localRealEstate/region').attribute('type').value
+
+          @local_real_estate = {
+            :overview => xml.xpath('//localRealEstate/region/links/overview').text,
+            :for_sale_by_owner => xml.xpath('//localRealEstate/region/links/forSaleByOwner').text,
+            :for_sale => xml.xpath('//localRealEstate/region/links/forSale').text,
+          }
+        end
       end
     end
   end
