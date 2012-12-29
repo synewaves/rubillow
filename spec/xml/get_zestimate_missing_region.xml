@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Zestimate:zestimate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Zestimate="http://www.zillow.com/static/xsd/Zestimate.xsd" xsi:schemaLocation="http://www.zillow.com/static/xsd/Zestimate.xsd http://www.zillowstatic.com/vstatic/4f6d65a3e1e76db2baf166972ee9ef71/static/xsd/Zestimate.xsd">
+  <request>
+    <zpid>78264249</zpid>
+  </request>
+  <message>
+    <text>Request successfully processed</text>
+    <code>0</code>
+  </message>
+  <response>
+    <zpid>78264249</zpid>
+    <links>
+      <homedetails>http://www.zillow.com/homedetails/8663-Orchard-Loop-Rd-NE-Leland-NC-28451/78264249_zpid/</homedetails>
+      <graphsanddata>http://www.zillow.com/homedetails/8663-Orchard-Loop-Rd-NE-Leland-NC-28451/78264249_zpid/#charts-and-data</graphsanddata>
+      <mapthishome>http://www.zillow.com/homes/78264249_zpid/</mapthishome>
+      <comparables>http://www.zillow.com/homes/comps/78264249_zpid/</comparables>
+    </links>
+    <address>
+      <street>8663 Orchard Loop Rd NE</street>
+      <zipcode>28451</zipcode>
+      <city>Leland</city>
+      <state>NC</state>
+      <latitude>34.217408</latitude>
+      <longitude>-78.054412</longitude>
+    </address>
+    <zestimate>
+      <amount currency="USD">136518</amount>
+      <last-updated>12/27/2012</last-updated>
+      <oneWeekChange deprecated="true"></oneWeekChange>
+      <valueChange duration="30" currency="USD">-1299</valueChange>
+      <valuationRange>
+        <low currency="USD">23208</low>
+        <high currency="USD">203412</high>
+      </valuationRange>
+      <percentile>58</percentile>
+    </zestimate>
+    <localRealEstate></localRealEstate>
+    <regions>
+      <zipcode-id>69961</zipcode-id>
+      <city-id></city-id>
+      <county-id>2640</county-id>
+      <state-id>36</state-id>
+    </regions>
+  </response>
+</Zestimate:zestimate>
+<!-- H:001  T:15ms  S:790  R:Fri Dec 28 20:59:48 PST 2012  B:3.0.177752.20121228113358693comp_rel_a.177752.20121228113743311comp_rel_a -->
