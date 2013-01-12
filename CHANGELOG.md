@@ -1,3 +1,8 @@
+## 0.0.5 / 2013-01-12
+
+  * Include RentZestimate if available
+  * Check if region info exists before populating
+
 ## 0.0.4 / 2012-01-31
 
   * Check if lastSoldDate exists before parsing
