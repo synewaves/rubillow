@@ -1,3 +1,6 @@
+require 'simplecov'
+SimpleCov.start if ENV["COVERAGE"]
+
 require File.expand_path("../../lib/rubillow", __FILE__)
 require 'rspec'
 

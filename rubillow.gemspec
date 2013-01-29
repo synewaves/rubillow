@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/synewaves/rubillow"
   s.summary     = "Ruby library to access the Zillow API"
   s.description = "Ruby library to access the Zillow API"
+  s.license     = "MIT"
 
   s.rubyforge_project = "rubillow"
 
@@ -18,11 +19,11 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_development_dependency "rake",      "~> 0.9.2"
-  s.add_development_dependency "rspec",     "~> 2.6"
-  s.add_development_dependency "yard",      ">= 0.6.8"
-  s.add_development_dependency "bluecloth", ">= 2.1.0"
-  s.add_development_dependency "rcov",      "~> 0.9.10"
-  
-  s.add_runtime_dependency "nokogiri",      "~> 1.5.0"
+  s.add_dependency "nokogiri", "~> 1.5.0"
+
+  s.add_development_dependency "rake", "~> 10.0.3"
+  s.add_development_dependency "rspec", "~> 2.12.0"
+  s.add_development_dependency "yard", "~> 0.8.3"
+  s.add_development_dependency "bluecloth", "~> 2.2.0"
+  s.add_development_dependency "simplecov", "~> 0.7.1"
 end
