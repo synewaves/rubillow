@@ -63,6 +63,7 @@ You should find the documentation for your version of Rubillow on [Rubygems](htt
 
 [![Build Status](https://travis-ci.org/synewaves/rubillow.png?branch=master)](https://travis-ci.org/synewaves/rubillow)
 [![Dependency Status](https://gemnasium.com/synewaves/rubillow.png?travis)](https://gemnasium.com/synewaves/rubillow)
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/synewaves/rubillow)
 
 # License
 
