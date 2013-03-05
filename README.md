@@ -61,9 +61,11 @@ You should find the documentation for your version of Rubillow on [Rubygems](htt
 
 # Build & Dependency Status
 
+[![Gem Version](https://badge.fury.io/rb/rubillow.png)](http://badge.fury.io/rb/rubillow)
 [![Build Status](https://travis-ci.org/synewaves/rubillow.png?branch=master)](https://travis-ci.org/synewaves/rubillow)
 [![Dependency Status](https://gemnasium.com/synewaves/rubillow.png?travis)](https://gemnasium.com/synewaves/rubillow)
-[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/synewaves/rubillow)
+[![Code Climate](https://codeclimate.com/github/synewaves/rubillow.png)](https://codeclimate.com/github/synewaves/rubillow)
+[![Coverage Status](https://coveralls.io/repos/synewaves/rubillow/badge.png?branch=master)](https://coveralls.io/r/synewaves/rubillow)
 
 # License
 
