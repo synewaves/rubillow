@@ -25,9 +25,9 @@ module Rubillow
         
         return if !success?
         
-        @height = @parser.xpath('//request/height').text.to_i
-        @width = @parser.xpath('//request/width').text.to_i
-        @url = @parser.xpath('//response/url').text
+        @height = @parser.xpath('//request/height').first.text.to_i
+        @width = @parser.xpath('//request/width').first.text.to_i
+        @url = @parser.xpath('//response/url').first.text
       end
     end
   end

@@ -31,7 +31,7 @@ module Rubillow
         
         return if !success?
         
-        @id = @parser.xpath('//id').text
+        @id = @parser.xpath('//id').first.text
         @state = @parser.xpath('//state').text
         @city = @parser.xpath('//city').text
         @neighborhood = @parser.xpath('//neighborhood').text
