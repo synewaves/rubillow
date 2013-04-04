@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<SearchResults:searchresults xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.zillow.com/static/xsd/SearchResults.xsd http://www.zillowstatic.com/vstatic/aef8ddf0c58c6e153fc4285eac934229/static/xsd/SearchResults.xsd" xmlns:SearchResults="http://www.zillow.com/static/xsd/SearchResults.xsd">
+<SearchResults:searchresults xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SearchResults="http://www.zillow.com/static/xsd/SearchResults.xsd" xsi:schemaLocation="http://www.zillow.com/static/xsd/SearchResults.xsd http://www.zillowstatic.com/vstatic/aef8ddf0c58c6e153fc4285eac934229/static/xsd/SearchResults.xsd">
   <request>
     <address>3651 louisiana st 205 san diego ca</address>
     <citystatezip>92104</citystatezip>
@@ -39,8 +38,7 @@
         <zestimate>
           <amount currency="USD">249461</amount>
           <last-updated>04/02/2013</last-updated>
-          <oneWeekChange deprecated="true">
-        </oneWeekChange>
+          <oneWeekChange deprecated="true"/>
           <valueChange duration="30" currency="USD">20262</valueChange>
           <valuationRange>
             <low currency="USD">219526</low>
@@ -48,6 +46,16 @@
           </valuationRange>
           <percentile>0</percentile>
         </zestimate>
+        <rentzestimate>
+          <amount currency="USD">1483</amount>
+          <last-updated>04/01/2013</last-updated>
+          <oneWeekChange deprecated="true"/>
+          <valueChange/>
+          <valuationRange>
+            <low currency="USD">1201</low>
+            <high currency="USD">1883</high>
+          </valuationRange>
+        </rentzestimate>
         <localRealEstate>
           <region id="274717" type="neighborhood" name="North Park">
             <links>
@@ -82,8 +90,7 @@
         <zestimate>
           <amount currency="USD">246695</amount>
           <last-updated>04/02/2013</last-updated>
-          <oneWeekChange deprecated="true">
-        </oneWeekChange>
+          <oneWeekChange deprecated="true"/>
           <valueChange duration="30" currency="USD">19294</valueChange>
           <valuationRange>
             <low currency="USD">214625</low>
@@ -91,6 +98,16 @@
           </valuationRange>
           <percentile>0</percentile>
         </zestimate>
+        <rentzestimate>
+          <amount currency="USD">1343</amount>
+          <last-updated>04/01/2013</last-updated>
+          <oneWeekChange deprecated="true"/>
+          <valueChange/>
+          <valuationRange>
+            <low currency="USD">1222</low>
+            <high currency="USD">1800</high>
+          </valuationRange>
+        </rentzestimate>
         <localRealEstate>
           <region id="274717" type="neighborhood" name="North Park">
             <links>
@@ -104,4 +121,3 @@
     </results>
   </response>
 </SearchResults:searchresults>
-<!-- H:002  T:32ms  S:1888  R:Wed Apr 03 20:23:13 PDT 2013  B:3.0.188938.20130403071811424-comp_rel_b.188938.20130403072100606-comp_rel_b -->

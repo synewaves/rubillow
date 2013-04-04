@@ -62,13 +62,12 @@ module Rubillow
           :high => xml.xpath('//zestimate/valuationRange/high').first.text,
         }
         @change = xml.xpath('//zestimate/valueChange').first.text
-
         if xml.xpath('//rentzestimate/amount').text.length > 0
           @rent_zestimate = {
             :price => xml.xpath('//rentzestimate/amount').first.text,
             :last_updated => xml.xpath('//rentzestimate/last-updated').first.text,
             :value_change => xml.xpath('//rentzestimate/valueChange').first.text,
-            :value_duration => xml.xpath('//rentzestimate/valueChange').attr('duration').value,
+            :value_duration => xml.xpath('//rentzestimate').first.xpath('//valueChange').attr('duration').value.chomp,
             :valuation_range => {
               :low => xml.xpath('//rentzestimate/valuationRange/low').first.text,
               :high => xml.xpath('//rentzestimate/valuationRange/high').first.text
