@@ -31,15 +31,15 @@ module Rubillow
         return if !success?
         
         extract_property_basics(@parser)
-        
-        @fips_county = @parser.xpath('//FIPScounty').text
-        @tax_assessment_year = @parser.xpath('//taxAssessmentYear').text
-        @tax_assessment = @parser.xpath('//taxAssessment').text
-        @year_built = @parser.xpath('//yearBuilt').text
-        if tmp = @parser.xpath('//lastSoldDate').text and tmp.strip.length > 0
+        @fips_county = ""
+        @fips_county = @parser.xpath('//FIPScounty').first.text unless @parser.xpath('//FIPScounty').empty?
+        @tax_assessment_year = @parser.xpath('//taxAssessmentYear').first.text
+        @tax_assessment = @parser.xpath('//taxAssessment').first.text
+        @year_built = @parser.xpath('//yearBuilt').first.text
+        if tmp = @parser.xpath('//lastSoldDate').first.text and tmp.strip.length > 0
           @last_sold_date = Date.strptime(tmp, "%m/%d/%Y")
         end
-        @last_sold_price = @parser.xpath('//lastSoldPrice').text
+        @last_sold_price = @parser.xpath('//lastSoldPrice').first.text
       end
     end
   end

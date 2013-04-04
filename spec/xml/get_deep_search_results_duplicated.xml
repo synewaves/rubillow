@@ -1,0 +1,123 @@
+<SearchResults:searchresults xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SearchResults="http://www.zillow.com/static/xsd/SearchResults.xsd" xsi:schemaLocation="http://www.zillow.com/static/xsd/SearchResults.xsd http://www.zillowstatic.com/vstatic/aef8ddf0c58c6e153fc4285eac934229/static/xsd/SearchResults.xsd">
+  <request>
+    <address>3651 louisiana st 205 san diego ca</address>
+    <citystatezip>92104</citystatezip>
+  </request>
+  <message>
+    <text>Request successfully processed</text>
+    <code>0</code>
+  </message>
+  <response>
+    <results>
+      <result>
+        <zpid>66109976</zpid>
+        <links>
+          <homedetails>http://www.zillow.com/homedetails/3651-Louisiana-St-APT-205-San-Diego-CA-92104/66109976_zpid/</homedetails>
+          <graphsanddata>http://www.zillow.com/homedetails/3651-Louisiana-St-APT-205-San-Diego-CA-92104/66109976_zpid/#charts-and-data</graphsanddata>
+          <mapthishome>http://www.zillow.com/homes/66109976_zpid/</mapthishome>
+          <comparables>http://www.zillow.com/homes/comps/66109976_zpid/</comparables>
+        </links>
+        <address>
+          <street>3651 Louisiana St APT 205</street>
+          <zipcode>92104</zipcode>
+          <city>San Diego</city>
+          <state>CA</state>
+          <latitude>32.744895</latitude>
+          <longitude>-117.139743</longitude>
+        </address>
+        <FIPScounty>6073</FIPScounty>
+        <useCode>Condominium</useCode>
+        <taxAssessmentYear>2012</taxAssessmentYear>
+        <taxAssessment>180539.0</taxAssessment>
+        <yearBuilt>1985</yearBuilt>
+        <finishedSqFt>800</finishedSqFt>
+        <bathrooms>2.0</bathrooms>
+        <bedrooms>2</bedrooms>
+        <lastSoldDate>06/10/2011</lastSoldDate>
+        <lastSoldPrice currency="USD">186000</lastSoldPrice>
+        <zestimate>
+          <amount currency="USD">249461</amount>
+          <last-updated>04/02/2013</last-updated>
+          <oneWeekChange deprecated="true"/>
+          <valueChange duration="30" currency="USD">20262</valueChange>
+          <valuationRange>
+            <low currency="USD">219526</low>
+            <high currency="USD">271912</high>
+          </valuationRange>
+          <percentile>0</percentile>
+        </zestimate>
+        <rentzestimate>
+          <amount currency="USD">1483</amount>
+          <last-updated>04/01/2013</last-updated>
+          <oneWeekChange deprecated="true"/>
+          <valueChange/>
+          <valuationRange>
+            <low currency="USD">1201</low>
+            <high currency="USD">1883</high>
+          </valuationRange>
+        </rentzestimate>
+        <localRealEstate>
+          <region id="274717" type="neighborhood" name="North Park">
+            <links>
+              <overview>http://www.zillow.com/local-info/CA-San-Diego/North-Park/r_274717/</overview>
+              <forSaleByOwner>http://www.zillow.com/north-park-san-diego-ca/fsbo/</forSaleByOwner>
+              <forSale>http://www.zillow.com/north-park-san-diego-ca/</forSale>
+            </links>
+          </region>
+        </localRealEstate>
+      </result>
+      <result>
+        <zpid>2126762315</zpid>
+        <links>
+          <homedetails>http://www.zillow.com/homedetails/3651-Louisiana-St-APT-205-San-Diego-CA-92104/2126762315_zpid/</homedetails>
+          <mapthishome>http://www.zillow.com/homes/2126762315_zpid/</mapthishome>
+          <comparables>http://www.zillow.com/homes/comps/2126762315_zpid/</comparables>
+        </links>
+        <address>
+          <street>3651 Louisiana St APT 205</street>
+          <zipcode>92104</zipcode>
+          <city>San Diego</city>
+          <state>CA</state>
+          <latitude>32.7447</latitude>
+          <longitude>-117.13995</longitude>
+        </address>
+        <FIPScounty>6073</FIPScounty>
+        <useCode>Condominium</useCode>
+        <yearBuilt>1985</yearBuilt>
+        <finishedSqFt>800</finishedSqFt>
+        <bathrooms>1.5</bathrooms>
+        <bedrooms>2</bedrooms>
+        <zestimate>
+          <amount currency="USD">246695</amount>
+          <last-updated>04/02/2013</last-updated>
+          <oneWeekChange deprecated="true"/>
+          <valueChange duration="30" currency="USD">19294</valueChange>
+          <valuationRange>
+            <low currency="USD">214625</low>
+            <high currency="USD">288633</high>
+          </valuationRange>
+          <percentile>0</percentile>
+        </zestimate>
+        <rentzestimate>
+          <amount currency="USD">1343</amount>
+          <last-updated>04/01/2013</last-updated>
+          <oneWeekChange deprecated="true"/>
+          <valueChange/>
+          <valuationRange>
+            <low currency="USD">1222</low>
+            <high currency="USD">1800</high>
+          </valuationRange>
+        </rentzestimate>
+        <localRealEstate>
+          <region id="274717" type="neighborhood" name="North Park">
+            <links>
+              <overview>http://www.zillow.com/local-info/CA-San-Diego/North-Park/r_274717/</overview>
+              <forSaleByOwner>http://www.zillow.com/north-park-san-diego-ca/fsbo/</forSaleByOwner>
+              <forSale>http://www.zillow.com/north-park-san-diego-ca/</forSale>
+            </links>
+          </region>
+        </localRealEstate>
+      </result>
+    </results>
+  </response>
+</SearchResults:searchresults>

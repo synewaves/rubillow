@@ -55,23 +55,22 @@ module Rubillow
         extract_links(xml)
         extract_address(xml)
         
-        @price = xml.xpath('//zestimate/amount').text
-        @last_updated = Date.strptime(xml.xpath('//zestimate/last-updated').text, "%m/%d/%Y")
+        @price = xml.xpath('//zestimate/amount').first.text
+        @last_updated = Date.strptime(xml.xpath('//zestimate/last-updated').first.text, "%m/%d/%Y")
         @valuation_range = {
-          :low  => xml.xpath('//zestimate/valuationRange/low').text,
-          :high => xml.xpath('//zestimate/valuationRange/high').text,
+          :low  => xml.xpath('//zestimate/valuationRange/low').first.text,
+          :high => xml.xpath('//zestimate/valuationRange/high').first.text,
         }
-        @change = xml.xpath('//zestimate/valueChange').text
-
+        @change = xml.xpath('//zestimate/valueChange').first.text
         if xml.xpath('//rentzestimate/amount').text.length > 0
           @rent_zestimate = {
-            :price => xml.xpath('//rentzestimate/amount').text,
-            :last_updated => xml.xpath('//rentzestimate/last-updated').text,
-            :value_change => xml.xpath('//rentzestimate/valueChange').text,
-            :value_duration => xml.xpath('//rentzestimate/valueChange').attr('duration').value,
+            :price => xml.xpath('//rentzestimate/amount').first.text,
+            :last_updated => xml.xpath('//rentzestimate/last-updated').first.text,
+            :value_change => xml.xpath('//rentzestimate/valueChange').first.text,
+            :value_duration => xml.xpath('//rentzestimate').first.xpath('//valueChange').attr('duration').value.chomp,
             :valuation_range => {
-              :low => xml.xpath('//rentzestimate/valuationRange/low').text,
-              :high => xml.xpath('//rentzestimate/valuationRange/high').text
+              :low => xml.xpath('//rentzestimate/valuationRange/low').first.text,
+              :high => xml.xpath('//rentzestimate/valuationRange/high').first.text
             },
             :percentile => xml.xpath('//rentzestimate/percentile').text
           }
@@ -82,7 +81,7 @@ module Rubillow
         if tmp = xml.xpath('//zestimate/valueChange').attr('duration')
           @change_duration = tmp.value
         end
-        @percentile = xml.xpath('//zestimate/percentile').text
+        @percentile = xml.xpath('//zestimate/percentile').first.text
 
         if xml.at_xpath('//localRealEstate/region')
           @region = xml.xpath('//localRealEstate/region').attribute('name').value
@@ -90,9 +89,9 @@ module Rubillow
           @region_type = xml.xpath('//localRealEstate/region').attribute('type').value
 
           @local_real_estate = {
-            :overview => xml.xpath('//localRealEstate/region/links/overview').text,
-            :for_sale_by_owner => xml.xpath('//localRealEstate/region/links/forSaleByOwner').text,
-            :for_sale => xml.xpath('//localRealEstate/region/links/forSale').text,
+            :overview => xml.xpath('//localRealEstate/region/links/overview').first.text,
+            :for_sale_by_owner => xml.xpath('//localRealEstate/region/links/forSaleByOwner').first.text,
+            :for_sale => xml.xpath('//localRealEstate/region/links/forSale').first.text,
           }
         end
       end
