@@ -31,8 +31,8 @@ module Rubillow
         return if !success?
         
         extract_property_basics(@parser)
-        
-        @fips_county = @parser.xpath('//FIPScounty').text
+        @fips_county = ""
+        @fips_county = @parser.xpath('//FIPScounty').first.text unless @parser.xpath('//FIPScounty').empty?
         @tax_assessment_year = @parser.xpath('//taxAssessmentYear').first.text
         @tax_assessment = @parser.xpath('//taxAssessment').first.text
         @year_built = @parser.xpath('//yearBuilt').first.text
