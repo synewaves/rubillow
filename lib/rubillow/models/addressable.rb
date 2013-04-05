@@ -24,12 +24,12 @@ module Rubillow
         address = xml.xpath('//address')
         if !address.empty?
           @address = {
-            :street    => address.xpath('//street').text,
-            :city      => address.xpath('//city').text,
-            :state     => address.xpath('//state').text,
-            :zipcode   => address.xpath('//zipcode').text,
-            :latitude  => address.xpath('//latitude').text,
-            :longitude => address.xpath('//longitude').text,
+            :street    => address.xpath('//street').first.text,
+            :city      => address.xpath('//city').first.text,
+            :state     => address.xpath('//state').first.text,
+            :zipcode   => address.xpath('//zipcode').first.text,
+            :latitude  => address.xpath('//latitude').first.text,
+            :longitude => address.xpath('//longitude').first.text,
           }
         end
       end

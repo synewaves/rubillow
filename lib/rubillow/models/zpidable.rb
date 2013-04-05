@@ -18,7 +18,7 @@ module Rubillow
           selector = '//zpid'
         end
         
-        @zpid = xml.xpath(selector).text
+        @zpid = xml.xpath(selector).first.text
       end
     end
   end
