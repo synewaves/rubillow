@@ -1,6 +1,8 @@
 ## 0.0.6 / 2013-04-10
   
+  * Fix case where Zillow returns multiple results for an address -- assume first address for result
   * Fix RentZestimate bug when valueChange doesn't have a duration.
+  * Fix common scenarios where xml nodes are not present
 
 ## 0.0.5 / 2013-01-12
 
