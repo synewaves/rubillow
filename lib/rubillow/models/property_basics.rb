@@ -24,13 +24,12 @@ module Rubillow
       
       # @private
       def extract_property_basics(xml)
-        @use_code = ""
-        @use_code = xml.xpath('//useCode').first.text unless xml.xpath('//useCode').empty?
-        @lot_size_square_feet = xml.xpath('//lotSizeSqFt').text
-        @finished_square_feet = xml.xpath('//finishedSqFt').first.text
-        @bathrooms = xml.xpath('//bathrooms').first.text
-        @bedrooms = xml.xpath('//bedrooms').first.text
-        @total_rooms = xml.xpath('//totalRooms').text
+        @use_code = xpath_if_present('//useCode', :text, xml, "")
+        @lot_size_square_feet = xpath_if_present('//lotSizeSqFt', :text, xml, "")
+        @finished_square_feet = xpath_if_present('//finishedSqFt', :text, xml, "")
+        @bathrooms = xpath_if_present('//bathrooms', :text, xml, "")
+        @bedrooms = xpath_if_present('//bedrooms', :text, xml, "")
+        @total_rooms = xpath_if_present('//totalRooms', :text, xml, "")
       end
     end
   end

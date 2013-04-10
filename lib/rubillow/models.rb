@@ -1,10 +1,13 @@
 require "nokogiri"
+require "rubillow/helpers/xml_parsing_helper"
 
 module Rubillow
   # Sub module for returned and parsed web service data
   module Models
     # Base class for data models
     class Base
+      include XmlParsingHelper
+
       # @return [String] the raw XML content from the service
       attr_accessor :xml
       

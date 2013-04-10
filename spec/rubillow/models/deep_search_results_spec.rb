@@ -87,4 +87,10 @@ describe Rubillow::Models::DeepSearchResult do
     data.last_sold_price.should == "186000"
     data.use_code.should == "Condominium"
   end
+
+  it "doesn't raise an error when data is missing" do
+    lambda {
+      Rubillow::Models::DeepSearchResult.new(get_xml("get_deep_search_results_missing_data.xml"))
+    }.should_not raise_error
+  end
 end
