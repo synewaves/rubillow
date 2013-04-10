@@ -97,4 +97,12 @@ describe Rubillow::Models::SearchResult do
     data.local_real_estate.should == nil
     data.region.should == nil
   end
+
+  it "populates the results from GetZestimate with missing valueDuration data" do
+    data = Rubillow::Models::SearchResult.new(get_xml('get_zestimate_missing_value_duration.xml'))
+    
+    data.zpid.should == '29366758'
+    data.rent_zestimate.should be_a Hash
+    data.rent_zestimate[:value_duration].should be == '30' 
+  end
 end

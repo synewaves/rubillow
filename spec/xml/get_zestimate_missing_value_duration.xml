@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Zestimate:zestimate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Zestimate="http://www.zillow.com/static/xsd/Zestimate.xsd" xsi:schemaLocation="http://www.zillow.com/static/xsd/Zestimate.xsd http://www.zillowstatic.com/vstatic/ff767ff8bf412f0cf22b5c412ec1cc5a/static/xsd/Zestimate.xsd">
+  <request>
+    <zpid>29366758</zpid>
+  </request>
+  <message>
+    <text>Request successfully processed</text>
+    <code>0</code>
+  </message>
+  <response>
+    <zpid>29366758</zpid>
+    <links>
+      <homedetails>http://www.zillow.com/homedetails/7500-Blue-Beach-Cv-Austin-TX-78759/29366758_zpid/</homedetails>
+      <graphsanddata>http://www.zillow.com/homedetails/7500-Blue-Beach-Cv-Austin-TX-78759/29366758_zpid/#charts-and-data</graphsanddata>
+      <mapthishome>http://www.zillow.com/homes/29366758_zpid/</mapthishome>
+      <comparables>http://www.zillow.com/homes/comps/29366758_zpid/</comparables>
+    </links>
+    <address>
+      <street>7500 Blue Beach Cv</street>
+      <zipcode>78759</zipcode>
+      <city>Austin</city>
+      <state>TX</state>
+      <latitude>30.414619</latitude>
+      <longitude>-97.777438</longitude>
+    </address>
+    <zestimate>
+      <amount currency="USD">382942</amount>
+      <last-updated>04/09/2013</last-updated>
+      <oneWeekChange deprecated="true"></oneWeekChange>
+      <valueChange duration="30" currency="USD">4774</valueChange>
+      <valuationRange>
+        <low currency="USD">329330</low>
+        <high currency="USD">436554</high>
+      </valuationRange>
+      <percentile>73</percentile>
+    </zestimate>
+    <rentzestimate>
+      <amount currency="USD">2505</amount>
+      <last-updated>04/01/2013</last-updated>
+      <oneWeekChange deprecated="true"></oneWeekChange>
+      <valueChange></valueChange>
+      <valuationRange>
+        <low currency="USD">1979</low>
+        <high currency="USD">3056</high>
+      </valuationRange>
+    </rentzestimate>
+    <localRealEstate>
+      <region id="10221" type="city" name="Austin">
+        <links>
+          <overview>http://www.zillow.com/local-info/TX-Austin/r_10221/</overview>
+          <forSaleByOwner>http://www.zillow.com/austin-tx/fsbo/</forSaleByOwner>
+          <forSale>http://www.zillow.com/austin-tx/</forSale>
+        </links>
+      </region>
+    </localRealEstate>
+    <regions>
+      <zipcode-id>92668</zipcode-id>
+      <city-id>10221</city-id>
+      <county-id>1440</county-id>
+      <state-id>54</state-id>
+    </regions>
+  </response>
+</Zestimate:zestimate>
+<!-- H:003  T:6ms  S:1133  R:Wed Apr 10 10:53:47 PDT 2013  B:3.0.189437.20130408124808855-comp_rel_b.189437.20130408124954685-comp_rel_b -->
