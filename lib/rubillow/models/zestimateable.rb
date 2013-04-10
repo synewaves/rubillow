@@ -67,7 +67,7 @@ module Rubillow
             :price => xml.xpath('//rentzestimate/amount').first.text,
             :last_updated => xml.xpath('//rentzestimate/last-updated').first.text,
             :value_change => xml.xpath('//rentzestimate/valueChange').first.text,
-            :value_duration => xml.xpath('//rentzestimate').first.xpath('//valueChange').attr('duration').value.chomp,
+            :value_duration => xml.xpath('//rentzestimate').first.xpath("//valueChange").first.attr("duration").chomp,
             :valuation_range => {
               :low => xml.xpath('//rentzestimate/valuationRange/low').first.text,
               :high => xml.xpath('//rentzestimate/valuationRange/high').first.text

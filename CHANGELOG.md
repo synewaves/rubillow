@@ -1,3 +1,7 @@
+## 0.0.6 / 2013-04-10
+  
+  * Fix RentZestimate bug when valueChange doesn't have a duration.
+
 ## 0.0.5 / 2013-01-12
 
   * Include RentZestimate if available
