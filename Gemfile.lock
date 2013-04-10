@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rubillow (0.0.5)
+    rubillow (0.0.6)
       nokogiri (~> 1.5)
 
 GEM
@@ -18,7 +18,7 @@ GEM
     diff-lcs (1.2.1)
     mime-types (1.21)
     multi_json (1.6.1)
-    nokogiri (1.5.6)
+    nokogiri (1.5.9)
     rake (10.0.3)
     rest-client (1.6.7)
       mime-types (>= 1.16)
