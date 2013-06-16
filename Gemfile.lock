@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     rubillow (0.0.7)
-      nokogiri (~> 1.5)
+      nokogiri (~> 1.5.0)
 
 GEM
   remote: http://rubygems.org/
