@@ -1,3 +1,7 @@
+## 0.0.8 / 2013-06-16
+
+  * Fix nokogiri gem requirement to maintain 1.8.7 compatibilty.
+
 ## 0.0.7 / 2013-06-16
 
   * Remove unnecessary chomp call from value duration
