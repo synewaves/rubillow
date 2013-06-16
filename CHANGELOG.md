@@ -1,3 +1,7 @@
+## 0.0.7 / 2013-06-16
+
+  * Remove unnecessary chomp call from value duration
+
 ## 0.0.6 / 2013-04-10
   
   * Fix case where Zillow returns multiple results for an address -- assume first address for result
