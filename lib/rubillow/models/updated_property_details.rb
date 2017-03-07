@@ -92,7 +92,7 @@ module Rubillow
           end
         end
 
-        if(@parser.xpath('//editedFacts'))
+        if !@parser.xpath('//editedFacts').empty?
           @edited_facts = {}
           @parser.xpath('//editedFacts').children.each do |elm|
             @edited_facts[underscore(elm.name).to_sym] = elm.text
