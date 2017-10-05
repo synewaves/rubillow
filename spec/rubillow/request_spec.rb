@@ -53,6 +53,7 @@ describe Rubillow::Request, ".request" do
   it "connects to configured host and port" do
     Rubillow::Request.request.address.should == Rubillow.configuration.host
     Rubillow::Request.request.port.should    == Rubillow.configuration.port
+    Rubillow::Request.request.use_ssl?.should == Rubillow.configuration.use_ssl
   end
 
   it "sets configured open and read timeouts" do
