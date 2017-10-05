@@ -34,6 +34,7 @@ module Rubillow
     def self.request
       http = Net::HTTP.new(Rubillow.configuration.host, Rubillow.configuration.port)
       
+      http.use_ssl    = Rubillow.configuration.use_ssl
       http.open_timeout = Rubillow.configuration.http_open_timeout
       http.read_timeout = Rubillow.configuration.http_read_timeout
       http

@@ -7,6 +7,9 @@ module Rubillow
     # @return [Integer] HTTP port (defaults to +80+)
     attr_accessor :port
     
+    # @return [Boolean] Use HTTPS (defaults to +false+)
+    attr_accessor :use_ssl
+
     # @return [String] relative service path (defaults to +webservice/+)
     attr_accessor :path
     
@@ -22,7 +25,8 @@ module Rubillow
     # @private
     def initialize
       self.host              = "www.zillow.com"
-      self.port              = 80
+      self.port              = 443
+      self.use_ssl           = true
       self.path              = "webservice/"
       self.http_open_timeout = 2
       self.http_read_timeout = 2
